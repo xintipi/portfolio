@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import Head from 'next/head'
 import { FC, ReactNode } from 'react'
 import { FiArrowUp } from 'react-icons/fi'
