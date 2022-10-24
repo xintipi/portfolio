@@ -1,0 +1,78 @@
+.circles {
+  @apply absolute top-0 left-0 w-full h-full overflow-hidden;
+  z-index: -1;
+
+  li {
+    @apply absolute block list-none w-5 h-5 -bottom-[150px];
+    animation: animate 25s linear infinite;
+
+    &:nth-child(1) {
+      @apply left-1/4 w-20 h-20;
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      @apply left-[10%] w-[30px] h-[30px];
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+
+    &:nth-child(3) {
+      @apply left-[70%] w-[20px] h-[20px];
+      animation-delay: 4s;
+    }
+
+    &:nth-child(4) {
+      @apply left-[40%] w-[60px] h-[60px];
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+
+    &:nth-child(5) {
+      @apply left-[65%] w-[30px] h-[30px];
+      animation-delay: 0s;
+    }
+
+    &:nth-child(6) {
+      @apply left-3/4 w-[110px] h-[110px];
+      animation-delay: 3s;
+    }
+
+    &:nth-child(7) {
+      @apply left-[35%] w-[150px] h-[150px];
+      animation-delay: 7s;
+    }
+
+    &:nth-child(8) {
+      @apply left-2/4 w-[25px] h-[25px];
+      animation-delay: 15s;
+      animation-duration: 45s;
+    }
+
+    &:nth-child(9) {
+      @apply left-[20%] w-[25px] h-[25px];
+      animation-delay: 2s;
+      animation-duration: 35s;
+    }
+
+    &:nth-child(10) {
+      @apply left-[85%] w-[150px] h-[150px];
+      animation-delay: 0s;
+      animation-duration: 11s;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 20%;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}

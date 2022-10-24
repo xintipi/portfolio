@@ -1,0 +1,4 @@
+.scroll-top {
+  @apply bg-primary-500 #{!important};
+  @apply fixed bottom-16 right-8 z-10 cursor-pointer rounded-lg p-3 text-white transition-colors duration-150 hover:bg-primary-600;
+}

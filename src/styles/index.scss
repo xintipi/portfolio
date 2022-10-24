@@ -1,0 +1,50 @@
+@import 'tailwindcss/base';
+
+@layer base {
+  @import 'partials/base/variables';
+  @import 'partials/base/globals';
+  @import 'partials/base/fonts';
+}
+
+@import 'tailwindcss/components';
+
+@layer components {
+  @import 'partials/components/scroll-top';
+  @import 'partials/components/header';
+}
+
+@import 'tailwindcss/utilities';
+
+.hero {
+  @apply h-screen;
+  z-index: 1;
+}
+
+.container {
+  @apply mx-auto max-w-xl px-6 md:max-w-4xl lg:max-w-7xl;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  @apply text-gray-300;
+}
+
+.slick-dots {
+  li {
+    @apply m-0;
+
+    button:before {
+      @apply text-xs dark:text-gray-400;
+    }
+
+    &:hover button:before {
+      @apply text-gray-400;
+    }
+  }
+
+  li.slick-active {
+    button:before {
+      @apply text-primary-500;
+    }
+  }
+}
