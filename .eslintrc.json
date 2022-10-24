@@ -1,4 +1,5 @@
 {
+  "parser": "@typescript-eslint/parser",
   "plugins": ["simple-import-sort", "@typescript-eslint", "react-hooks"],
   "extends": [
     "next/core-web-vitals",
