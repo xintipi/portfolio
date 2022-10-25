@@ -14,64 +14,78 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store as Store}>
       <ThemeProvider>
         <Head>
-          <link type="image/png" sizes="16x16" rel="icon" href="/favicon-16.png" />
-          <link type="image/png" sizes="32x32" rel="icon" href="/favicon-32.png" />
-          <link type="image/png" sizes="96x96" rel="icon" href="/favicon-96.png" />
-          <link type="image/png" sizes="120x120" rel="icon" href="/favicon-120.png" />
+          <link
+            type="image/png"
+            sizes="16x16"
+            rel="icon"
+            href="https://i.ibb.co/58BpJgP/favicon-16.png"
+          />
+          <link
+            type="image/png"
+            sizes="32x32"
+            rel="icon"
+            href="https://i.ibb.co/VqNBMxR/favicon-32.png"
+          />
+          <link
+            type="image/png"
+            sizes="96x96"
+            rel="icon"
+            href="https://i.ibb.co/KNLYv0N/favicon-96.png"
+          />
 
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="57x57"
-            href="/apple-touch-icon-57.png"
+            href="https://i.ibb.co/j562qZW/apple-touch-icon-57.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="60x60"
-            href="/apple-touch-icon-60.png"
+            href="https://i.ibb.co/YjdGnp0/apple-touch-icon-60.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="72x72"
-            href="/apple-touch-icon-72.png"
+            href="https://i.ibb.co/D1whWQQ/apple-touch-icon-72.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="76x76"
-            href="/apple-touch-icon-76.png"
+            href="https://i.ibb.co/rkdYGQQ/apple-touch-icon-76.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="114x114"
-            href="/apple-touch-icon-114.png"
+            href="https://i.ibb.co/cxmGjcJ/apple-touch-icon-114.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="120x120"
-            href="/apple-touch-icon-120.png"
+            href="https://i.ibb.co/6NmDsqZ/apple-touch-icon-120.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="144x144"
-            href="/apple-touch-icon-144.png"
+            href="https://i.ibb.co/S747s11/apple-touch-icon-144.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="152x152"
-            href="/apple-touch-icon-152.png"
+            href="https://i.ibb.co/270fCxW/apple-touch-icon-152.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="180x180"
-            href="/apple-touch-icon-180.png"
+            href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png"
           />
         </Head>
         <Component {...pageProps} />
