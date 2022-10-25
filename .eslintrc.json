@@ -1,16 +1,5 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["simple-import-sort", "@typescript-eslint", "react-hooks"],
   "extends": [
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "rules": {
-    "react/no-unescaped-entities": "off",
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "off"
-  }
+    "next/core-web-vitals"
+  ]
 }

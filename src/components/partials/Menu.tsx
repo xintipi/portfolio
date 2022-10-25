@@ -1,5 +1,4 @@
 import { Dialog, Transition } from '@headlessui/react'
-import Tippy from '@tippyjs/react'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -67,23 +66,19 @@ const Menu = () => {
           </li>
         </ul>
 
-        <Tippy content="Switch Theme">
-          <button
-            type="button"
-            className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3"
-            onClick={() => toggleTheme()}>
-            {theme === Theme.LIGHT ? <BsMoonStars size={20} /> : <BsSun size={20} />}
-          </button>
-        </Tippy>
+        <button
+          type="button"
+          className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3"
+          onClick={() => toggleTheme()}>
+          {theme === Theme.LIGHT ? <BsMoonStars size={20} /> : <BsSun size={20} />}
+        </button>
 
-        <Tippy content="Menu">
-          <button
-            type="button"
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="ml-5 flex text-gray-700 dark:text-gray-200 md:hidden">
-            <HiMenuAlt3 size={24} />
-          </button>
-        </Tippy>
+        <button
+          type="button"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="ml-5 flex text-gray-700 dark:text-gray-200 md:hidden">
+          <HiMenuAlt3 size={24} />
+        </button>
       </div>
 
       {/* Mobile menu */}

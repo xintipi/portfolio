@@ -1,15 +1,23 @@
-import Tippy from '@tippyjs/react'
 import clsx from 'clsx'
 import Image from 'next/image'
 import React from 'react'
 import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
+import { Tooltip } from 'react-tippy'
 import Typed from 'react-typed'
 
+import { SocialObject } from '@/data/social'
 import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
-const HeroSection = () => {
+const HeroSection = ({ content }: { content: SocialObject[] }) => {
+  const components = {
+    FiInstagram: <FiInstagram size={25} />,
+    FiFacebook: <FiFacebook size={25} />,
+    FiLinkedin: <FiLinkedin size={25} />,
+    FiGithub: <FiGithub size={25} />,
+  }
+
   return (
     <div className="hero relative -mt-16 flex items-center justify-center">
       <HeroBackground />
@@ -23,42 +31,17 @@ const HeroSection = () => {
           I'm a <Typed strings={['Frontend Developer']} typeSpeed={70} backSpeed={40} loop />
         </div>
         <div className="mt-4 flex gap-5">
-          <Tippy content="Instagram">
-            <a
-              href="https://www.instagram.com/n.h.trung_xinn/"
-              target="_blank"
-              className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
-              rel="noreferrer">
-              <FiInstagram size={25} />
-            </a>
-          </Tippy>
-          <Tippy content="Facebook">
-            <a
-              href="https://www.facebook.com/huutrung.mmt/"
-              target="_blank"
-              className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
-              rel="noreferrer">
-              <FiFacebook size={25} />
-            </a>
-          </Tippy>
-          <Tippy content="Linkedin">
-            <a
-              href="https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/"
-              target="_blank"
-              className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
-              rel="noreferrer">
-              <FiLinkedin size={25} />
-            </a>
-          </Tippy>
-          <Tippy content="Github">
-            <a
-              href="https://github.com/xintipi"
-              target="_blank"
-              className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
-              rel="noreferrer">
-              <FiGithub size={25} />
-            </a>
-          </Tippy>
+          {content.map((social) => (
+            <Tooltip key={social.title} title={social.title} trigger="mouseenter">
+              <a
+                href={social.href}
+                target="_blank"
+                className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
+                rel="noreferrer">
+                {components[social.icon as keyof typeof components]}
+              </a>
+            </Tooltip>
+          ))}
         </div>
         <a
           className={clsx([styles.btn, 'mt-5 px-8'])}
