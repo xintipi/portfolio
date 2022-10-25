@@ -5,8 +5,7 @@ import HeroSection from '@/components/partials/HeroSection'
 import { social, SocialObject } from '@/data/social'
 import Layout from '@/layouts/Layout'
 
-// @ts-ignore
-const Home: NextPage = ({ social }: { social: SocialObject[] }) => {
+const Home: NextPage<{ social: SocialObject[] }> = ({ social }) => {
   return (
     <Layout
       title="Home"

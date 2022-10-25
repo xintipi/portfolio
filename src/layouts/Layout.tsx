@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({ children, title, desciption }) => {
-  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Portfology'
+  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Xintipi'
   const pageTitle = title ? `${title} - ${appName}` : appName
 
   return (

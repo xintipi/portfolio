@@ -28,11 +28,11 @@ const HeroSection = ({ content }: { content: SocialObject[] }) => {
         <h1 className="mt-4 text-3xl font-bold ">Nguyen Huu Trung</h1>
         <div className="mt-2 flex gap-1">
           {' '}
-          I'm a <Typed strings={['Frontend Developer']} typeSpeed={70} backSpeed={40} loop />
+          I'm a <Typed strings={['Frontend Developer']} typeSpeed={55} backSpeed={45} loop />
         </div>
         <div className="mt-4 flex gap-5">
-          {content.map((social) => (
-            <Tooltip key={social.title} title={social.title} trigger="mouseenter">
+          {content.map((social: SocialObject) => (
+            <Tooltip key={social.title} title={social.title} trigger="mouseenter" animation="scale">
               <a
                 href={social.href}
                 target="_blank"
