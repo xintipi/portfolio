@@ -20,6 +20,7 @@ const Layout: FC<Props> = ({ children, title, desciption }) => {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={desciption} />
+        <link rel="preload" as="font" />
       </Head>
 
       <div className="flex min-h-screen flex-col">
