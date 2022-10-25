@@ -20,7 +20,6 @@ const Layout: FC<Props> = ({ children, title, desciption }) => {
       <Head>
         <meta name="description" content={desciption} />
         <title>{pageTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="flex min-h-screen flex-col">
