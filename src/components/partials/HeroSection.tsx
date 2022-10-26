@@ -21,10 +21,10 @@ const HeroSection = ({ content }: { content: SocialObject[] }) => {
 
   return (
     <div className="hero relative -mt-16 flex items-center justify-center">
-      <HeroBackground />
+      {/*<HeroBackground />*/}
       <div className="flex flex-col items-center">
         <div className="overflow-hidden rounded-full">
-          <Image src="/images/avatar/avatar-3.png" width={180} height={180} alt="avatar" priority />
+          <Image src="/images/avatar/avatar-3.png" width={180} height={180} alt="avatar" />
         </div>
         <h1 className="mt-4 text-3xl font-bold ">Nguyen Huu Trung</h1>
         <div className="mt-2 flex gap-1">
