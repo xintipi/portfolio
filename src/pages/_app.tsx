@@ -14,31 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store as Store}>
       <ThemeProvider>
-        <Head>
-          <meta name="keywords" content="Nguyen Huu Trung, Xintipi, Frontend Developer, Mail me" />
-          <meta name="author" content="Xintipi" />
-          <meta name="robots" content="noindex" />
-          <meta charSet="utf-8" key="charSet" />
-          <meta name="viewport" content="width=device-width" key="viewport" />
-          {favicon.icon.map((link: Favicon) => (
-            <link
-              key={link.href}
-              type={link.type}
-              sizes={link.sizes}
-              rel={link.rel}
-              href={link.href}
-            />
-          ))}
-          {favicon.appleIcon.map((link: Favicon) => (
-            <link
-              key={link.href}
-              type={link.type}
-              sizes={link.sizes}
-              rel={link.rel}
-              href={link.href}
-            />
-          ))}
-        </Head>
         <Component {...pageProps} />
       </ThemeProvider>
     </Provider>
