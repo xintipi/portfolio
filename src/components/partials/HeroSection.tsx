@@ -3,15 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
-import { Tooltip } from 'react-tippy'
 import Typed from 'react-typed'
 
-import { SocialObject } from '@/data/social'
 import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
-const HeroSection = ({ content }: { content: SocialObject[] }) => {
+const HeroSection = () => {
   const components = {
     FiInstagram: <FiInstagram size={25} />,
     FiFacebook: <FiFacebook size={25} />,
