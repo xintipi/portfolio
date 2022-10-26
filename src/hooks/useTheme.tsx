@@ -1,5 +1,5 @@
 import { Draft } from '@reduxjs/toolkit'
-import { createContext, FC, useContext, useEffect, useState } from 'react'
+import { createContext, FC, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { ThemeEnum as Theme } from '@/enums/theme.enum'
@@ -14,7 +14,9 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
   const { theme: mode } = useSelector((state: Draft<State>) => state.common)
   const dispatch = useDispatch<Dispatch>()
 
-  const toggleTheme = () => {
+  const value = useMemo(() => ({ theme }), [theme])
+
+  const toggleTheme = useCallback(() => {
     if (theme === Theme.LIGHT) {
       setTheme(Theme.DARK)
       document.documentElement.classList.add(Theme.DARK)
@@ -24,7 +26,7 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
       document.documentElement.classList.remove(Theme.DARK)
       dispatch(setThemeState(Theme.LIGHT))
     }
-  }
+  }, [theme])
 
   useEffect(() => {
     if (mode) {
@@ -41,7 +43,11 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
     }
   }, [mode])
 
-  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
+  return (
+    <ThemeContext.Provider value={{ theme: value.theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  )
 }
 
 const useTheme = () => {

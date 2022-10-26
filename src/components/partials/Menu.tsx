@@ -2,7 +2,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Fragment, useState } from 'react'
+import { Fragment, useCallback, useState } from 'react'
 import { BsMoonStars, BsSun } from 'react-icons/bs'
 import { HiMenuAlt3 } from 'react-icons/hi'
 
@@ -13,6 +13,13 @@ const Menu = () => {
   const router = useRouter()
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false)
   const { theme, toggleTheme } = useTheme()
+
+  const handleSideBar = useCallback(
+    (payload: boolean) => {
+      setSidebarOpen(payload)
+    },
+    [sidebarOpen]
+  )
 
   return (
     <header className="header text-gray-700 dark:text-gray-200">
@@ -77,7 +84,7 @@ const Menu = () => {
         <button
           aria-label="tap sidebar"
           type="button"
-          onClick={() => setSidebarOpen(!sidebarOpen)}
+          onClick={() => handleSideBar(!sidebarOpen)}
           className="ml-5 flex text-gray-700 dark:text-gray-200 md:hidden">
           <HiMenuAlt3 size={24} />
         </button>
@@ -85,7 +92,7 @@ const Menu = () => {
 
       {/* Mobile menu */}
       <Transition.Root show={sidebarOpen} as={Fragment}>
-        <Dialog as="div" className="fixed inset-0 z-40 flex md:hidden" onClose={setSidebarOpen}>
+        <Dialog as="div" className="fixed inset-0 z-40 flex md:hidden" onClose={handleSideBar}>
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -117,7 +124,7 @@ const Menu = () => {
                   <button
                     type="button"
                     className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    onClick={() => setSidebarOpen(false)}>
+                    onClick={() => handleSideBar(false)}>
                     <span className="text-white">&#10006;</span>
                   </button>
                 </div>
