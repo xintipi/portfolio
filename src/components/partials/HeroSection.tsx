@@ -2,23 +2,21 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
-import { Tooltip } from 'react-tippy'
+// import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import Typed from 'react-typed'
 
-import { SocialObject } from '@/data/social'
 import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
-const components = {
-  FiInstagram: <FiInstagram size={25} />,
-  FiFacebook: <FiFacebook size={25} />,
-  FiLinkedin: <FiLinkedin size={25} />,
-  FiGithub: <FiGithub size={25} />,
-}
+const HeroSection = () => {
+  // const components = {
+  //   FiInstagram: <FiInstagram size={25} />,
+  //   FiFacebook: <FiFacebook size={25} />,
+  //   FiLinkedin: <FiLinkedin size={25} />,
+  //   FiGithub: <FiGithub size={25} />,
+  // }
 
-const HeroSection = ({ content }: { content: SocialObject[] }) => {
   return (
     <div className="hero relative -mt-16 flex items-center justify-center">
       <HeroBackground />
@@ -31,20 +29,20 @@ const HeroSection = ({ content }: { content: SocialObject[] }) => {
           {' '}
           I'm a <Typed strings={['Frontend Developer']} typeSpeed={55} backSpeed={45} loop />
         </div>
-        <div className="mt-4 flex gap-5">
-          {content.map((social: SocialObject) => (
-            <Tooltip key={social.title} title={social.title} trigger="mouseenter" animation="scale">
-              <a
-                href={social.href}
-                target="_blank"
-                className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
-                aria-label={social.title}
-                rel="noreferrer">
-                {components[social.icon as keyof typeof components]}
-              </a>
-            </Tooltip>
-          ))}
-        </div>
+        {/*<div className="mt-4 flex gap-5">*/}
+        {/*  {content.map((social: SocialObject) => (*/}
+        {/*    <Tooltip key={social.title} title={social.title} trigger="mouseenter" animation="scale">*/}
+        {/*      <a*/}
+        {/*        href={social.href}*/}
+        {/*        target="_blank"*/}
+        {/*        className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"*/}
+        {/*        aria-label={social.title}*/}
+        {/*        rel="noreferrer">*/}
+        {/*        {components[social.icon as keyof typeof components]}*/}
+        {/*      </a>*/}
+        {/*    </Tooltip>*/}
+        {/*  ))}*/}
+        {/*</div>*/}
         <Link href="mailto:huutrung.mmt@gmail.com" legacyBehavior>
           <a className={clsx([styles.btn, 'mt-5 px-8'])} target="_blank" rel="noreferrer">
             Mail me
