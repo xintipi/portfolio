@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <Layout
       title="Home"
       desciption="Hi, I am Nguyen Huu Trung, I am a frontend developer. I work from Ho Chi Minh city, Vietnam.">
-      <HeroSection />
+      <div>test</div>
     </Layout>
   )
 }
