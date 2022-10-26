@@ -18,6 +18,12 @@ const Layout: FC<Props> = ({ children, title, desciption, keywords }) => {
 
   return (
     <>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={desciption} />
+        <meta name="keywords" content={keywords} />
+      </Head>
+
       <div className="flex min-h-screen flex-col">
         <ScrollToTop
           className="scroll-top"
