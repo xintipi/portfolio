@@ -18,7 +18,6 @@ const Layout: FC<Props> = ({ children, title, desciption }) => {
   return (
     <>
       <Head>
-        <meta name="robots" content="noindex" />
         <meta name="description" content={desciption} />
         <title>{pageTitle}</title>
       </Head>
