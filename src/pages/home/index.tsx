@@ -18,7 +18,7 @@ const Home: FC<{ social: SocialObject[] }> = ({ social }) => {
     <Layout
       title="Home"
       desciption="Hi, I am Nguyen Huu Trung, I am a frontend developer. I work from Ho Chi Minh city, Vietnam.">
-      {/*<HeroSection content={social} />*/}
+      <HeroSection content={social} />
     </Layout>
   )
 }
