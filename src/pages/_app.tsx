@@ -12,8 +12,9 @@ import { ThemeProvider } from '@/hooks/useTheme'
 import { Store, store } from '@/store'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { pathname } = useRouter()
-  const lang = pathname.startsWith('/vi') ? 'vi' : 'en'
+  const { query } = useRouter()
+  const lang = query.lang === 'vi' ? 'vi' : 'en'
+
   useEffect(() => {
     document.documentElement.lang = lang
   }, [lang])
