@@ -7,9 +7,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta charSet="utf-8" key="charSet" />
-        <meta name="viewport" content="width=device-width" key="viewport" />
-        <meta name="robots" content="noindex" />
         {favicon.icon.map((link: Favicon) => (
           <link
             key={link.href}

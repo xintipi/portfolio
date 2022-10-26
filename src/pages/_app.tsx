@@ -14,6 +14,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store as Store}>
       <ThemeProvider>
+        <Head>
+          <meta charSet="utf-8" key="charset" />
+          <meta name="viewport" content="width=device-width" key="viewport" />
+          <meta name="robots" content="noindex" />
+        </Head>
         <Component {...pageProps} />
       </ThemeProvider>
     </Provider>
