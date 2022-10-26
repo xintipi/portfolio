@@ -6,12 +6,13 @@ import ScrollToTop from 'react-scroll-to-top'
 import Menu from '@/components/partials/Menu'
 
 interface Props {
+  host?: string
   title?: string
   desciption?: string
   children: ReactNode
 }
 
-const Layout: FC<Props> = ({ children, title, desciption }) => {
+const Layout: FC<Props> = ({ children, host, title, desciption }) => {
   const appName = process.env.NEXT_PUBLIC_APP_NAME
   const pageTitle = title ? `${title} - ${appName}` : appName
 
@@ -21,6 +22,7 @@ const Layout: FC<Props> = ({ children, title, desciption }) => {
         <meta name="robots" content="noindex" />
         <meta name="description" content={desciption} />
         <title>{pageTitle}</title>
+        <link rel="canonical" href={host as string} />
       </Head>
 
       <div className="flex min-h-screen flex-col">

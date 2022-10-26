@@ -11,7 +11,9 @@ import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
-const HeroSection = ({ content }: { content: SocialObject[] }) => {
+type ContentProps = { content: SocialObject[] }
+
+const HeroSection = ({ content }: ContentProps) => {
   const components = {
     FiInstagram: <FiInstagram size={25} />,
     FiFacebook: <FiFacebook size={25} />,
