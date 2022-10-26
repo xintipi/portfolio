@@ -14,9 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store as Store}>
       <ThemeProvider>
         <Head>
-          <meta charSet="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta
             name="keywords"
             content="Nguyen Huu Trung, Xintipi, I'm a Frontend Developer, Mail me"
