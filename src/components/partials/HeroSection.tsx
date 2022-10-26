@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import { Tooltip } from 'react-tippy'
@@ -23,7 +24,7 @@ const HeroSection = ({ content }: { content: SocialObject[] }) => {
       <HeroBackground />
       <div className="flex flex-col items-center">
         <div className="overflow-hidden rounded-full">
-          <Image src="/images/avatar/avatar-3.png" width={180} height={180} alt="avatar" />
+          <Image src="/images/avatar/avatar-3.png" width={180} height={180} alt="avatar" priority />
         </div>
         <h1 className="mt-4 text-3xl font-bold ">Nguyen Huu Trung</h1>
         <div className="mt-2 flex gap-1">
@@ -43,13 +44,11 @@ const HeroSection = ({ content }: { content: SocialObject[] }) => {
             </Tooltip>
           ))}
         </div>
-        <a
-          className={clsx([styles.btn, 'mt-5 px-8'])}
-          href="mailto:huutrung.mmt@gmail.com"
-          target="_blank"
-          rel="noreferrer">
-          Mail me
-        </a>
+        <Link href="mailto:huutrung.mmt@gmail.com" legacyBehavior>
+          <a className={clsx([styles.btn, 'mt-5 px-8'])} target="_blank" rel="noreferrer">
+            Mail me
+          </a>
+        </Link>
       </div>
 
       <div className="absolute bottom-0 flex flex-col items-center ">
