@@ -12,13 +12,12 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({ children, title, desciption }) => {
-  const appName = process.env.NEXT_PUBLIC_APP_NAME
+  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Xintipi'
   const pageTitle = title ? `${title} - ${appName}` : appName
 
   return (
     <>
       <Head>
-        <meta name="robots" content="noindex" />
         <meta name="description" content={desciption} />
         <title>{pageTitle}</title>
       </Head>
