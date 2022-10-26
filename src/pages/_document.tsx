@@ -3,15 +3,22 @@ import React from 'react'
 
 import { Favicon, favicon } from '@/data/favicon'
 
-export default function Document(props: { __NEXT_DATA__: { locale: string } }) {
+export default function Document(props: { lang: string }) {
+  const { lang } = props
   return (
-    <Html dir={props.__NEXT_DATA__.locale === 'en' ? 'ltr' : 'rtl'}>
+    <Html lang={lang}>
       <Head>
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
           href="https://i.ibb.co/58BpJgP/favicon-16.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="https://i.ibb.co/VqNBMxR/favicon-32.png"
         />
         <link
           rel="applue-touch-icon"
@@ -26,4 +33,11 @@ export default function Document(props: { __NEXT_DATA__: { locale: string } }) {
       </body>
     </Html>
   )
+}
+
+export async function getInitialProps(ctx: { pathname: never }) {
+  const initialProps = await Document.getInitialProps(ctx)
+  const { pathname } = ctx
+  const lang = pathname.startsWith('/vi') ? 'vi' : 'en'
+  return { ...initialProps, lang }
 }
