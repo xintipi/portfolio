@@ -6,26 +6,7 @@ import { Favicon, favicon } from '@/data/favicon'
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
-        {favicon.icon.map((link: Favicon) => (
-          <link
-            key={link.href}
-            type={link.type}
-            sizes={link.sizes}
-            rel={link.rel}
-            href={link.href}
-          />
-        ))}
-        {favicon.appleIcon.map((link: Favicon) => (
-          <link
-            key={link.href}
-            type={link.type}
-            sizes={link.sizes}
-            rel={link.rel}
-            href={link.href}
-          />
-        ))}
-      </Head>
+      <Head />
       <body>
         <Main />
         <NextScript />
