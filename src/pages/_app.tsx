@@ -6,6 +6,7 @@ import Head from 'next/head'
 import React from 'react'
 import { Provider } from 'react-redux'
 
+import { Favicon, favicon } from '@/data/favicon'
 import { ThemeProvider } from '@/hooks/useTheme'
 import { Store, store } from '@/store'
 
@@ -17,6 +18,26 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="keywords" content="Nguyen Huu Trung, Xintipi, Frontend Developer, Mail me" />
           <meta name="author" content="Xintipi" />
           <meta name="robots" content="noindex" />
+          <meta charSet="utf-8" key="charSet" />
+          <meta name="viewport" content="width=device-width" key="viewport" />
+          {favicon.icon.map((link: Favicon) => (
+            <link
+              key={link.href}
+              type={link.type}
+              sizes={link.sizes}
+              rel={link.rel}
+              href={link.href}
+            />
+          ))}
+          {favicon.appleIcon.map((link: Favicon) => (
+            <link
+              key={link.href}
+              type={link.type}
+              sizes={link.sizes}
+              rel={link.rel}
+              href={link.href}
+            />
+          ))}
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>
