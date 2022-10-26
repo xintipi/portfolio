@@ -14,26 +14,26 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store as Store}>
       <ThemeProvider>
-        <Head>
-          {favicon.icon.map((link: Favicon) => (
-            <link
-              key={link.href}
-              type={link.type}
-              sizes={link.sizes}
-              rel={link.rel}
-              href={link.href}
-            />
-          ))}
-          {favicon.appleIcon.map((link: Favicon) => (
-            <link
-              key={link.href}
-              type={link.type}
-              sizes={link.sizes}
-              rel={link.rel}
-              href={link.href}
-            />
-          ))}
-        </Head>
+        {/*<Head>*/}
+        {/*  {favicon.icon.map((link: Favicon) => (*/}
+        {/*    <link*/}
+        {/*      key={link.href}*/}
+        {/*      type={link.type}*/}
+        {/*      sizes={link.sizes}*/}
+        {/*      rel={link.rel}*/}
+        {/*      href={link.href}*/}
+        {/*    />*/}
+        {/*  ))}*/}
+        {/*  {favicon.appleIcon.map((link: Favicon) => (*/}
+        {/*    <link*/}
+        {/*      key={link.href}*/}
+        {/*      type={link.type}*/}
+        {/*      sizes={link.sizes}*/}
+        {/*      rel={link.rel}*/}
+        {/*      href={link.href}*/}
+        {/*    />*/}
+        {/*  ))}*/}
+        {/*</Head>*/}
         <Component {...pageProps} />
       </ThemeProvider>
     </Provider>
