@@ -13,7 +13,7 @@ import HeroBackground from './HeroBackground'
 
 type ContentProps = { content: SocialObject[] }
 
-const HeroSection = ({ content }: ContentProps) => {
+const HeroSection = () => {
   const components = {
     FiInstagram: <FiInstagram size={25} />,
     FiFacebook: <FiFacebook size={25} />,
