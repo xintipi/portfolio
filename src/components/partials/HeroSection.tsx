@@ -11,9 +11,7 @@ import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
-type ContentProps = { content: SocialObject[] }
-
-const HeroSection = () => {
+const HeroSection = ({ content }: { content: SocialObject[] }) => {
   const components = {
     FiInstagram: <FiInstagram size={25} />,
     FiFacebook: <FiFacebook size={25} />,
@@ -32,6 +30,20 @@ const HeroSection = () => {
         <div className="mt-2 flex gap-1">
           {' '}
           I'm a <Typed strings={['Frontend Developer']} typeSpeed={55} backSpeed={45} loop />
+        </div>
+        <div className="mt-4 flex gap-5">
+          {content.map((social: SocialObject) => (
+            <Tooltip key={social.title} title={social.title} trigger="mouseenter" animation="scale">
+              <a
+                href={social.href}
+                target="_blank"
+                className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
+                aria-label={social.title}
+                rel="noreferrer">
+                {components[social.icon as keyof typeof components]}
+              </a>
+            </Tooltip>
+          ))}
         </div>
         <Link href="mailto:huutrung.mmt@gmail.com" legacyBehavior>
           <a className={clsx([styles.btn, 'mt-5 px-8'])} target="_blank" rel="noreferrer">
