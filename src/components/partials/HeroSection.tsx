@@ -11,14 +11,14 @@ import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
-const HeroSection = ({ content }: { content: SocialObject[] }) => {
-  const components = {
-    FiInstagram: <FiInstagram size={25} />,
-    FiFacebook: <FiFacebook size={25} />,
-    FiLinkedin: <FiLinkedin size={25} />,
-    FiGithub: <FiGithub size={25} />,
-  }
+const components = {
+  FiInstagram: <FiInstagram size={25} />,
+  FiFacebook: <FiFacebook size={25} />,
+  FiLinkedin: <FiLinkedin size={25} />,
+  FiGithub: <FiGithub size={25} />,
+}
 
+const HeroSection = ({ content }: { content: SocialObject[] }) => {
   return (
     <div className="hero relative -mt-16 flex items-center justify-center">
       <HeroBackground />
