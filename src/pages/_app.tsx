@@ -14,10 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store as Store}>
       <ThemeProvider>
         <Head>
-          <meta
-            name="keywords"
-            content="Nguyen Huu Trung, Xintipi, I'm a Frontend Developer, Mail me"
-          />
+          <meta name="keywords" content="Nguyen Huu Trung, Xintipi, Frontend Developer, Mail me" />
           <meta name="author" content="Xintipi" />
           <meta name="robots" content="noindex" />
         </Head>
