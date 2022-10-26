@@ -19,7 +19,7 @@ const Home: FC<{ social: SocialObject[] }> = ({ social }) => {
       title="Home"
       desciption="Hi, I am Nguyen Huu Trung, I am a frontend developer. I work from Ho Chi Minh city, Vietnam."
       keywords="Nguyen Huu Trung, Xintipi, Frontend Developer, Mail me">
-      {/*<HeroSection content={social} />*/}
+      <HeroSection content={social} />
     </Layout>
   )
 }

@@ -2,12 +2,10 @@ import '@/styles/index.scss'
 import 'react-tippy/dist/tippy.css'
 
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { Provider } from 'react-redux'
 
-import { Favicon, favicon } from '@/data/favicon'
 import { ThemeProvider } from '@/hooks/useTheme'
 import { Store, store } from '@/store'
 
