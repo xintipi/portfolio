@@ -38,6 +38,7 @@ const HeroSection = ({ content }: { content: SocialObject[] }) => {
                 href={social.href}
                 target="_blank"
                 className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
+                aria-label={social.title}
                 rel="noreferrer">
                 {components[social.icon as keyof typeof components]}
               </a>
