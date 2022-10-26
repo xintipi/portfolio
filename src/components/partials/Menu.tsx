@@ -67,6 +67,7 @@ const Menu = () => {
         </ul>
 
         <button
+          aria-label="toggle theme"
           type="button"
           className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3"
           onClick={() => toggleTheme()}>
@@ -74,6 +75,7 @@ const Menu = () => {
         </button>
 
         <button
+          aria-label="tap sidebar"
           type="button"
           onClick={() => setSidebarOpen(!sidebarOpen)}
           className="ml-5 flex text-gray-700 dark:text-gray-200 md:hidden">
