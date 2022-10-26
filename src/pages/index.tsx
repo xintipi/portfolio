@@ -1,5 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
-import { ElementType } from 'react'
+import type { GetStaticProps } from 'next'
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -10,8 +9,6 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-const Index: NextPage<{ Component: ElementType }> = ({ Component }) => {
-  return <Component />
-}
+const Index: () => void = () => {}
 
 export default Index
