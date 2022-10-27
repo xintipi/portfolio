@@ -32,11 +32,28 @@ class MyDocument extends Document {
             sizes="180x180"
             href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png"
           />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
-            defer
-            data-domain="portfolio-xintipi.vercel.app"
-            src="https://plausible.io/js/plausible.js"
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+          {/*<script*/}
+          {/*  defer*/}
+          {/*  data-domain="portfolio-xintipi.vercel.app"*/}
+          {/*  src="https://plausible.io/js/plausible.js"*/}
+          {/*/>*/}
         </Head>
         <body>
           <Main />

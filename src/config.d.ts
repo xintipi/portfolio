@@ -6,3 +6,9 @@ declare module 'react-tippy' {
     children: ReactNode
   }
 }
+
+declare global {
+  interface Window {
+    gtag: never
+  }
+}

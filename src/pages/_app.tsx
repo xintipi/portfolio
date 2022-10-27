@@ -10,13 +10,30 @@ import { Provider } from 'react-redux'
 import { ThemeProvider } from '@/hooks/useTheme'
 import { Store, store } from '@/store'
 
+import * as ga from '../lib/ga'
+
 function MyApp({ Component, pageProps }: AppProps) {
-  const { query, pathname } = useRouter()
+  const { query, pathname, events } = useRouter()
   const lang = query.lang === 'vi' ? 'vi' : 'en'
 
   useEffect(() => {
     document.documentElement.lang = lang
   }, [lang])
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      ga.pageview(url)
+    }
+    //When the component is mounted, subscribe to router changes
+    //and log those page views
+    events.on('routeChangeComplete', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method
+    return () => {
+      events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [events])
 
   return (
     <Provider store={store as Store}>
