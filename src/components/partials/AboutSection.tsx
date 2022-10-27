@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import { FC } from 'react'
 import { HiOutlineChartBar, HiOutlineFire } from 'react-icons/hi'
 
 import Button from '@/components/form/Button'
 import ProgressBar from '@/components/shared/ProgressBar'
 import SectionTitle from '@/components/shared/SectionTitle'
 
-const AboutSection: FC<{ description: string }> = ({ description }) => {
+const AboutSection = () => {
   return (
     <>
       <SectionTitle>About Me</SectionTitle>

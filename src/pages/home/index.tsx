@@ -16,13 +16,11 @@ type Props = {
 
 const Home: FC<Props> = ({ socials, about }) => {
   return (
-    <Layout
-      title="Home"
-      desciption="Nguyen Huu Trung, Ho Chi Minh, Viet Nam, Xintipi, Frontend Developer, Hire me.">
+    <Layout title="Home" desciption={about[0].description}>
       <HeroSection socials={socials} />
 
       <section className="container pt-20 pb-10">
-        <AboutSection description={about[0].description} />
+        <AboutSection />
       </section>
     </Layout>
   )
