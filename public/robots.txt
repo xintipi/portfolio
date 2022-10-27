@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://portfolio-xintipi.vercel.app/
+
+# Sitemaps
+Sitemap: https://portfolio-xintipi.vercel.app/sitemap.xml
+Sitemap: https://portfolio-xintipi.vercel.app/server-sitemap.xml
