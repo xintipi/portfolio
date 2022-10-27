@@ -20,6 +20,21 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store as Store}>
+      <NextSeo
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_DOMAIN,
+          locale: lang === 'en' ? 'en_US' : 'vi_VN',
+          images: [
+            {
+              url: process.env.NEXT_PUBLIC_DOMAIN + 'images/avatar/me.webp',
+              width: 1024,
+              height: 1024,
+              alt: 'Nguyen Huu Trung',
+              type: 'image/webp',
+            },
+          ],
+        }}
+      />
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>
