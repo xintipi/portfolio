@@ -3,7 +3,7 @@ import 'react-tippy/dist/tippy.css'
 
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { NextSeo, SocialProfileJsonLd } from 'next-seo'
+import { NextSeo } from 'next-seo'
 import React, { useEffect } from 'react'
 import { Provider } from 'react-redux'
 
@@ -11,7 +11,7 @@ import { ThemeProvider } from '@/hooks/useTheme'
 import { Store, store } from '@/store'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { query } = useRouter()
+  const { query, pathname } = useRouter()
   const lang = query.lang === 'vi' ? 'vi' : 'en'
 
   useEffect(() => {
@@ -20,23 +20,25 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store as Store}>
-      <NextSeo
-        openGraph={{
-          url: process.env.NEXT_PUBLIC_DOMAIN,
-          description:
-            'Frontend Developer, Nguyen Huu Trung, Ho Chi Minh, Viet Nam, nickname Xintipi and Hire me.',
-          locale: lang === 'en' ? 'en_US' : 'vi_VN',
-          images: [
-            {
-              url: process.env.NEXT_PUBLIC_DOMAIN + 'images/avatar/me.webp',
-              width: 1024,
-              height: 1024,
-              alt: 'Nguyen Huu Trung',
-              type: 'image/webp',
-            },
-          ],
-        }}
-      />
+      {pathname !== '/blog/[slug]' && (
+        <NextSeo
+          openGraph={{
+            url: process.env.NEXT_PUBLIC_DOMAIN,
+            description:
+              'Frontend Developer, Nguyen Huu Trung, Ho Chi Minh, Viet Nam, nickname Xintipi and Hire me.',
+            locale: lang === 'en' ? 'en_US' : 'vi_VN',
+            images: [
+              {
+                url: process.env.NEXT_PUBLIC_DOMAIN + 'images/avatar/me.webp',
+                width: 1024,
+                height: 1024,
+                alt: 'Nguyen Huu Trung',
+                type: 'image/webp',
+              },
+            ],
+          }}
+        />
+      )}
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>

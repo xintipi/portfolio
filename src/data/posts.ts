@@ -9,6 +9,7 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-1.png',
     imageUrl: '/images/posts/post-01.png',
     authorName: 'John Doe',
+    description: 'How to create and use API Routes in Next.js',
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -43,6 +44,7 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-2.png',
     imageUrl: '/images/posts/post-02.png',
     authorName: 'John Doe',
+    description: 'How to create Single Shared Layouts and Per-Page Layouts in Next.js',
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -77,6 +79,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-3.png',
     imageUrl: '/images/posts/post-03.png',
     authorName: 'John Doe',
+    description:
+      'Achieving a blur effect for all images, both local and remote, using Next.js, MDX and Rehype.',
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -111,6 +115,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-4.png',
     imageUrl: '/images/posts/post-04.png',
     authorName: 'John Doe',
+    description:
+      "PageSpeed analysis helped me discover the issue that was bringing down Chakra UI's website speed score. With a simple refactor, I was able to improve the score significantly.",
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -170,6 +176,8 @@ export const posts: PostInterface[] = [
               nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
               blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
             </p>`,
+    description:
+      "How to use Next.js's Server-side Rendering method to render your pages on the server-side.",
   },
   {
     id: 6,
@@ -179,6 +187,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-6.png',
     imageUrl: '/images/posts/post-06.png',
     authorName: 'John Doe',
+    description:
+      "How to use Next.js's Static Generation method to provide data in your pages at build time.",
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -213,6 +223,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-1.png',
     imageUrl: '/images/posts/post-01.png',
     authorName: 'John Doe',
+    description:
+      "How to use Next.js's Static Generation method to provide data in your pages at build time.",
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -247,6 +259,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-2.png',
     imageUrl: '/images/posts/post-02.png',
     authorName: 'John Doe',
+    description:
+      "How to use Next.js's Static Generation method to provide data in your pages at build time.",
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -281,6 +295,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-3.png',
     imageUrl: '/images/posts/post-03.png',
     authorName: 'John Doe',
+    description:
+      "How to use Next.js's Static Generation method to provide data in your pages at build time.",
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -315,6 +331,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-4.png',
     imageUrl: '/images/posts/post-04.png',
     authorName: 'John Doe',
+    description:
+      "How to use Next.js's Static Generation method to provide data in your pages at build time.",
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -349,6 +367,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-5.png',
     imageUrl: '/images/posts/post-05.png',
     authorName: 'John Doe',
+    description:
+      "How to use Next.js's Static Generation method to provide data in your pages at build time.",
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
@@ -383,6 +403,8 @@ export const posts: PostInterface[] = [
     thumbnailUrl: '/images/posts/post-thumbnail-6.png',
     imageUrl: '/images/posts/post-06.png',
     authorName: 'John Doe',
+    description:
+      "How to use Next.js's Static Generation method to provide data in your pages at build time.",
     content: `
     <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum

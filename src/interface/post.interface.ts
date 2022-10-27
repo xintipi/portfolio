@@ -6,5 +6,6 @@ export type PostInterface = {
   thumbnailUrl: string
   imageUrl: string
   authorName: string
+  description: string
   content: string
 }

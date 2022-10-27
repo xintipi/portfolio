@@ -1,7 +1,8 @@
 import { GetServerSideProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { FC } from 'react'
+import absoluteUrl from 'next-absolute-url/index'
+import React, { FC, useMemo } from 'react'
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 
 import CommentBox from '@/components/partials/CommentBox'
@@ -12,11 +13,25 @@ import Layout from '@/layouts/Layout'
 
 type Props = {
   post: PostInterface
+  host: string
 }
 
-const BlogSingle: FC<Props> = ({ post }) => {
+const BlogSingle: FC<Props> = ({ post, host }) => {
+  const openGraph = useMemo(() => {
+    return {
+      description: post.description,
+      title: `Blog | ${process.env.NEXT_PUBLIC_APP_NAME}`,
+      url: `${host}/blog/${post.slug}`,
+      images: [
+        {
+          url: `${host}${post.imageUrl}`,
+        },
+      ],
+    }
+  }, [host])
+
   return (
-    <Layout title="Blog">
+    <Layout title="Blog" description={post.description} openGraph={openGraph}>
       <div className="container mb-10">
         <div className="mt-24 flex flex-col items-center justify-center">
           <h1 className="text-center text-2xl font-semibold sm:text-3xl md:text-4xl">
@@ -72,12 +87,14 @@ const BlogSingle: FC<Props> = ({ post }) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { origin } = absoluteUrl(context.req)
   const slug = context.params?.slug as string
   const post = posts.find((post) => post.slug === slug)
   if (post) {
     return {
       props: {
         post,
+        host: origin,
       },
     }
   }
