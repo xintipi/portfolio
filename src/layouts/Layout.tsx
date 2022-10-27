@@ -9,17 +9,23 @@ import Header from '@/layouts/Header'
 interface Props {
   title?: string
   description?: string
+  canonical?: string
   children: ReactNode
   openGraph?: OpenGraph
 }
 
-const Layout: FC<Props> = ({ children, title, description, openGraph }) => {
+const Layout: FC<Props> = ({ children, title, description, canonical, openGraph }) => {
   const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Xintipi'
   const pageTitle = title ? `${title} - ${appName}` : appName
 
   return (
     <>
-      <NextSeo title={pageTitle} description={description} openGraph={openGraph} />
+      <NextSeo
+        title={pageTitle}
+        description={description}
+        canonical={canonical}
+        openGraph={openGraph}
+      />
 
       <Header />
 

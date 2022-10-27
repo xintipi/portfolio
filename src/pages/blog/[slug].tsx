@@ -31,7 +31,11 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
   }, [host])
 
   return (
-    <Layout title="Blog" description={post.description} openGraph={openGraph}>
+    <Layout
+      title="Blog"
+      canonical={`${host}/blog/${post.slug}`}
+      description={post.description}
+      openGraph={openGraph}>
       <div className="container mb-10">
         <div className="mt-24 flex flex-col items-center justify-center">
           <h1 className="text-center text-2xl font-semibold sm:text-3xl md:text-4xl">
