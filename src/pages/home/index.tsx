@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
 import { FC } from 'react'
 
+import AboutSection from '@/components/partials/AboutSection'
 import HeroSection from '@/components/partials/HeroSection'
 import { AboutMeInterface } from '@/interface/aboutMe.interface'
 import { SocialInterface } from '@/interface/social.interface'
@@ -20,6 +21,10 @@ const Home: FC<Props> = ({ socials, about }) => {
       desciption={about[0].description}
       keywords="Nguyen Huu Trung, Xintipi, Frontend Developer, Mail me">
       <HeroSection socials={socials} />
+
+      <section className="container pt-20 pb-10">
+        <AboutSection description={about[0].description} />
+      </section>
     </Layout>
   )
 }

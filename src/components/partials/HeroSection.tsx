@@ -13,14 +13,14 @@ import HeroBackground from './HeroBackground'
 
 type Props = { socials: SocialInterface[] }
 
-const HeroSection = ({ socials }: Props) => {
-  const components = {
-    FiInstagram: <FiInstagram size={25} />,
-    FiFacebook: <FiFacebook size={25} />,
-    FiLinkedin: <FiLinkedin size={25} />,
-    FiGithub: <FiGithub size={25} />,
-  }
+const components = {
+  FiInstagram: <FiInstagram size={25} />,
+  FiFacebook: <FiFacebook size={25} />,
+  FiLinkedin: <FiLinkedin size={25} />,
+  FiGithub: <FiGithub size={25} />,
+}
 
+const HeroSection = ({ socials }: Props) => {
   return (
     <div className="hero relative -mt-16 flex items-center justify-center">
       <HeroBackground />
@@ -53,9 +53,9 @@ const HeroSection = ({ socials }: Props) => {
             </Tooltip>
           ))}
         </div>
-        <Link href="mailto:huutrung.mmt@gmail.com" legacyBehavior>
+        <Link href="https://xintipi.github.io" legacyBehavior>
           <a className={clsx([styles.btn, 'mt-5 px-8'])} target="_blank" rel="noreferrer">
-            Mail me
+            Hire me
           </a>
         </Link>
       </div>
