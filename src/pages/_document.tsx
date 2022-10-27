@@ -47,11 +47,6 @@ class MyDocument extends Document {
           `,
             }}
           />
-          {/*<script*/}
-          {/*  defer*/}
-          {/*  data-domain="portfolio-xintipi.vercel.app"*/}
-          {/*  src="https://plausible.io/js/plausible.js"*/}
-          {/*/>*/}
         </Head>
         <body>
           <Main />
