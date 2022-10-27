@@ -16,6 +16,11 @@ class MyDocument extends Document {
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
         <Head>
+          <script
+            defer
+            data-domain="portfolio-xintipi.vercel.app"
+            src="https://plausible.io/js/plausible.js"
+          />
           <link
             rel="icon"
             type="image/png"

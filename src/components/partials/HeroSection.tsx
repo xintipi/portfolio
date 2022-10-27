@@ -6,12 +6,14 @@ import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import { Tooltip } from 'react-tippy'
 import Typed from 'react-typed'
 
-import { SocialObject } from '@/data/social'
+import { SocialInterface } from '@/interface/social.interface'
 import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
-const HeroSection = ({ content }: { content: SocialObject[] }) => {
+type Props = { socials: SocialInterface[] }
+
+const HeroSection = ({ socials }: Props) => {
   const components = {
     FiInstagram: <FiInstagram size={25} />,
     FiFacebook: <FiFacebook size={25} />,
@@ -24,7 +26,13 @@ const HeroSection = ({ content }: { content: SocialObject[] }) => {
       <HeroBackground />
       <div className="flex flex-col items-center">
         <div className="overflow-hidden rounded-full">
-          <Image src="/images/avatar/avatar-3.png" width={180} height={180} alt="avatar" />
+          <Image
+            src="/images/avatar/xin2.webp"
+            width={180}
+            height={180}
+            alt="avatar"
+            priority={process.env.NODE_ENV !== 'production'}
+          />
         </div>
         <h1 className="mt-4 text-3xl font-bold ">Nguyen Huu Trung</h1>
         <div className="mt-2 flex gap-1">
@@ -32,7 +40,7 @@ const HeroSection = ({ content }: { content: SocialObject[] }) => {
           I'm a <Typed strings={['Frontend Developer']} typeSpeed={55} backSpeed={45} loop />
         </div>
         <div className="mt-4 flex gap-5">
-          {content.map((social: SocialObject) => (
+          {socials.map((social: SocialInterface) => (
             <Tooltip key={social.title} title={social.title} trigger="mouseenter" animation="scale">
               <a
                 href={social.href}

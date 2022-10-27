@@ -3,7 +3,7 @@ import React, { FC, ReactNode } from 'react'
 import { FiArrowUp } from 'react-icons/fi'
 import ScrollToTop from 'react-scroll-to-top'
 
-import Menu from '@/components/partials/Menu'
+import Header from '@/layouts/Header'
 
 interface Props {
   title?: string
@@ -24,6 +24,8 @@ const Layout: FC<Props> = ({ children, title, desciption, keywords }) => {
         <meta name="keywords" content={keywords} />
       </Head>
 
+      <Header />
+
       <div className="flex min-h-screen flex-col">
         <ScrollToTop
           className="scroll-top"
@@ -34,7 +36,7 @@ const Layout: FC<Props> = ({ children, title, desciption, keywords }) => {
           }
           smooth
         />
-        <Menu />
+
         <div className="mt-16">{children}</div>
       </div>
     </>

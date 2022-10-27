@@ -9,7 +9,7 @@ import { HiMenuAlt3 } from 'react-icons/hi'
 import { ThemeEnum as Theme } from '@/enums/theme.enum'
 import { useTheme } from '@/hooks/useTheme'
 
-const Menu = () => {
+const Header = () => {
   const router = useRouter()
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false)
   const { theme, toggleTheme } = useTheme()
@@ -179,4 +179,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default Header

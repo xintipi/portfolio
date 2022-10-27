@@ -2,26 +2,40 @@ import { GetStaticProps } from 'next'
 import { FC } from 'react'
 
 import HeroSection from '@/components/partials/HeroSection'
-import { social, SocialObject } from '@/data/social'
+import { AboutMeInterface } from '@/interface/aboutMe.interface'
+import { SocialInterface } from '@/interface/social.interface'
 import Layout from '@/layouts/Layout'
+import { getAboutMe } from '@/utils/about-me'
+import { readData } from '@/utils/read-data'
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      social,
-    },
-  }
+type Props = {
+  socials: SocialInterface[]
+  about: AboutMeInterface[]
 }
 
-const Home: FC<{ social: SocialObject[] }> = ({ social }) => {
+const Home: FC<Props> = ({ socials, about }) => {
   return (
     <Layout
       title="Home"
-      desciption="Hi, I am Nguyen Huu Trung, I am a frontend developer. I work from Ho Chi Minh city, Vietnam."
+      desciption={about[0].description}
       keywords="Nguyen Huu Trung, Xintipi, Frontend Developer, Mail me">
-      <HeroSection content={social} />
+      <HeroSection socials={socials} />
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const { socials } = await readData<Props>('src/data/socials.json')
+  const about = await getAboutMe()
+
+  const props: Props = {
+    socials,
+    about,
+  }
+
+  return {
+    props,
+  }
 }
 
 export default Home
