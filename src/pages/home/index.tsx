@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import { SocialProfileJsonLd } from 'next-seo'
 import { FC } from 'react'
 
 import AboutSection from '@/components/partials/AboutSection'
@@ -17,6 +18,17 @@ type Props = {
 const Home: FC<Props> = ({ socials, about }) => {
   return (
     <Layout title="Home" desciption={about[0].description}>
+      <SocialProfileJsonLd
+        type="Person"
+        name="Nguyen Huu Trung"
+        url={process.env.SITE_URL as string}
+        sameAs={[
+          'https://www.facebook.com/huutrung.mmt',
+          'https://www.instagram.com/n.h.trung_xinn/',
+          'https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/',
+        ]}
+      />
+
       <HeroSection socials={socials} />
 
       <section className="container pt-20 pb-10">

@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "clean": "rm -rf node_modules package-lock.json yarn.lock",
     "lint:eslint": "eslint --cache --max-warnings 0  \"src/**/*.{ts,tsx}\" --fix",
@@ -28,6 +29,7 @@
     "next": "^13.0.0",
     "next-absolute-url": "^1.2.2",
     "next-seo": "^5.9.0",
+    "next-sitemap": "^3.1.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",

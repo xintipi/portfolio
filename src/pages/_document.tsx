@@ -16,11 +16,10 @@ class MyDocument extends Document {
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
         <Head>
-          <script
-            defer
-            data-domain="portfolio-xintipi.vercel.app"
-            src="https://plausible.io/js/plausible.js"
-          />
+          {/*Browser favicons - 16x16*/}
+          {/*Taskbar shortcut icons – 32x32*/}
+          {/*Desktop shortcut icons – 96x96*/}
+          {/*Apple touch icons – 180x180*/}
           <link
             rel="icon"
             type="image/png"
@@ -28,16 +27,15 @@ class MyDocument extends Document {
             href="https://i.ibb.co/58BpJgP/favicon-16.png"
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="https://i.ibb.co/VqNBMxR/favicon-32.png"
-          />
-          <link
             rel="applue-touch-icon"
             type="image/png"
             sizes="180x180"
             href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png"
+          />
+          <script
+            defer
+            data-domain="portfolio-xintipi.vercel.app"
+            src="https://plausible.io/js/plausible.js"
           />
         </Head>
         <body>
