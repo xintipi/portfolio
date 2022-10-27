@@ -16,7 +16,9 @@ const AboutSection: FC<{ description: string }> = ({ description }) => {
         <div>
           <p className="text-justify">{description}</p>
           <Button className="mt-5">
-            <Link href="/cv/Nguyen_Huu_Trung_Cover_Letter.pdf">Downlad CV</Link>
+            <Link href="/cv/Nguyen_Huu_Trung_Cover_Letter.pdf" target="_blank">
+              Downlad CV
+            </Link>
           </Button>
         </div>
 

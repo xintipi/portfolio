@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { memo } from 'react'
@@ -6,8 +5,8 @@ import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import { Tooltip } from 'react-tippy'
 import Typed from 'react-typed'
 
+import Button from '@/components/form/Button'
 import { SocialInterface } from '@/interface/social.interface'
-import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
@@ -53,11 +52,9 @@ const HeroSection = ({ socials }: Props) => {
             </Tooltip>
           ))}
         </div>
-        <Link href="https://xintipi.github.io" legacyBehavior>
-          <a className={clsx([styles.btn, 'mt-5 px-8'])} target="_blank" rel="noreferrer">
-            Hire me
-          </a>
-        </Link>
+        <Button className="mt-5 px-8">
+          <Link href="https://xintipi.github.io/">Hire me</Link>
+        </Button>
       </div>
 
       <div className="absolute bottom-0 flex flex-col items-center ">
