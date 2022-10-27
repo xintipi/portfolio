@@ -15,9 +15,9 @@ type Props = {
   about: AboutMeInterface[]
 }
 
-const Home: FC<Props> = ({ socials, about }) => {
+const Home: FC<Props> = ({ socials }) => {
   return (
-    <Layout title="Home" desciption={about[0].description}>
+    <Layout title="Home">
       {/*<SocialProfileJsonLd*/}
       {/*  type="Person"*/}
       {/*  name="Nguyen Huu Trung"*/}

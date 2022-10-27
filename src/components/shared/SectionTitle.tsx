@@ -1,8 +1,8 @@
-import React from 'react'
+import { FC, ReactNode } from 'react'
 
 import DotBg from '@/components/partials/DotBg'
 
-const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const SectionTitle: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <div className="relative">
       <DotBg className="absolute bottom-5 h-8 w-8 fill-current" />

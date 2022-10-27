@@ -23,6 +23,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextSeo
         openGraph={{
           url: process.env.NEXT_PUBLIC_DOMAIN,
+          description:
+            'Frontend Developer, Nguyen Huu Trung, Ho Chi Minh, Viet Nam, nickname Xintipi and Hire me.',
           locale: lang === 'en' ? 'en_US' : 'vi_VN',
           images: [
             {
