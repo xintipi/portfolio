@@ -20,16 +20,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store as Store}>
-      <SocialProfileJsonLd
-        type="Person"
-        name="Nguyen Huu Trung"
-        url={process.env.NEXT_PUBLIC_DOMAIN as string}
-        sameAs={[
-          'https://www.facebook.com/huutrung.mmt',
-          'https://www.instagram.com/n.h.trung_xinn/',
-          'https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/',
-        ]}
-      />
+      {/*<SocialProfileJsonLd*/}
+      {/*  type="Person"*/}
+      {/*  name="Nguyen Huu Trung"*/}
+      {/*  url={process.env.NEXT_PUBLIC_DOMAIN as string}*/}
+      {/*  sameAs={[*/}
+      {/*    'https://www.facebook.com/huutrung.mmt',*/}
+      {/*    'https://www.instagram.com/n.h.trung_xinn/',*/}
+      {/*    'https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/',*/}
+      {/*  ]}*/}
+      {/*/>*/}
       <NextSeo
         openGraph={{
           url: process.env.NEXT_PUBLIC_DOMAIN,

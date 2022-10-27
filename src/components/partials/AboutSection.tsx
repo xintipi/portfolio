@@ -14,7 +14,11 @@ const AboutSection: FC<{ description: string }> = ({ description }) => {
       <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:gap-8">
         {/* Bio */}
         <div>
-          <p className="text-justify">{description}</p>
+          <p className="whitespace-pre-line text-justify">
+            Hi, my name is Trung. I’m a front end developer with four years of experience and i'm
+            living in Ho Chi Minh city, Vietnam. I'm interesting websites that amazed my users as
+            well as delivering them in high quality.
+          </p>
           <Button className="mt-5">
             <Link href="/cv/Nguyen_Huu_Trung_Cover_Letter.pdf" target="_blank">
               Downlad CV
