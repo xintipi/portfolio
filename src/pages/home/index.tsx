@@ -15,7 +15,7 @@ type Props = {
   about: AboutMeInterface[]
 }
 
-const Home: FC<Props> = ({ socials }) => {
+const Home: FC<Props> = ({ socials, about }) => {
   return (
     <Layout title="Home">
       {/*<SocialProfileJsonLd*/}
@@ -32,7 +32,7 @@ const Home: FC<Props> = ({ socials }) => {
       <HeroSection socials={socials} />
 
       <section className="container pt-20 pb-10">
-        <AboutSection />
+        <AboutSection about={about[0].description} />
       </section>
     </Layout>
   )

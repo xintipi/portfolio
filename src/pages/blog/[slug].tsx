@@ -72,8 +72,8 @@ const BlogSingle: FC<Props> = ({ post }) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const id = context.params?.id as string
-  const post = posts.find((post) => post.id === Number(id))
+  const slug = context.params?.slug as string
+  const post = posts.find((post) => post.slug === slug)
   if (post) {
     return {
       props: {

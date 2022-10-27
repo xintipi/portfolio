@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import { FC } from 'react'
 import { HiOutlineChartBar, HiOutlineFire } from 'react-icons/hi'
 
 import Button from '@/components/form/Button'
 import ProgressBar from '@/components/shared/ProgressBar'
 import SectionTitle from '@/components/shared/SectionTitle'
 
-const AboutSection = () => {
+const AboutSection: FC<{ about: string }> = ({ about }) => {
   return (
     <>
       <SectionTitle>About Me</SectionTitle>
@@ -13,11 +14,7 @@ const AboutSection = () => {
       <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:gap-8">
         {/* Bio */}
         <div>
-          <p className="whitespace-pre-line text-justify">
-            Hi, my name is Trung. I’m a front end developer with four years of experience and i'm
-            living in Ho Chi Minh city, Vietnam. I'm interesting websites that amazed my users as
-            well as delivering them in high quality.
-          </p>
+          <p className="whitespace-pre-line text-justify">{about}</p>
           <Button className="mt-5">
             <Link href="/cv/Nguyen_Huu_Trung_Cover_Letter.pdf" target="_blank">
               Downlad CV

@@ -3,6 +3,7 @@ import { PostInterface } from '@/interface/post.interface'
 export const posts: PostInterface[] = [
   {
     id: 1,
+    slug: 'create-and-use-api-routes-in-nextjs',
     title: 'Lorem ipsum dolor sit amet',
     publishedAt: '7 April 2022',
     thumbnailUrl: '/images/posts/post-thumbnail-1.png',
@@ -36,6 +37,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 2,
+    slug: 'custom-layouts-in-nextjs',
     title: 'Dolorem eum magni eos aperiam',
     publishedAt: '9 Mar 2022',
     thumbnailUrl: '/images/posts/post-thumbnail-2.png',
@@ -69,6 +71,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 3,
+    slug: 'generating-blur-for-dynamic-images-nextjs',
     title: 'Magnam facilis autem',
     publishedAt: '15 Feb 2022',
     thumbnailUrl: '/images/posts/post-thumbnail-3.png',
@@ -102,6 +105,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 4,
+    slug: 'improving-chakra-ui-page-speed',
     title: 'Dolorem dolore est ipsam',
     publishedAt: '10 Jan 2022',
     thumbnailUrl: '/images/posts/post-thumbnail-4.png',
@@ -135,6 +139,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 5,
+    slug: 'using-nextjs-server-side-rendering-method',
     title: 'Nesciunt iure omnis dolorem tempora et accusantium',
     publishedAt: '01 Jan 2022',
     thumbnailUrl: '/images/posts/post-thumbnail-5.png',
@@ -168,6 +173,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 6,
+    slug: 'using-nextjs-static-generation-method',
     title: 'Optio molestias id quia eum',
     publishedAt: '28 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-6.png',
@@ -201,6 +207,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 7,
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
     title: 'Eius et ipsum occaecati dicta aut quaerat',
     publishedAt: '21 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-1.png',
@@ -234,6 +241,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 8,
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
     title: 'Dolorum ut in voluptas mollitia et saepe quo animi',
     publishedAt: '20 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-2.png',
@@ -267,6 +275,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 9,
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
     title: 'Fugit voluptas sed molestias voluptatem provident',
     publishedAt: '11 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-3.png',
@@ -300,6 +309,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 10,
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
     title: 'Adipisci placeat illum aut reiciendis qui',
     publishedAt: '10 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-4.png',
@@ -333,6 +343,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 11,
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
     title: 'Iusto eius quod necessitatibus culpa ea',
     publishedAt: '9 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-5.png',
@@ -366,6 +377,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: 12,
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
     title: 'Neque voluptates ratione',
     publishedAt: '8 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-6.png',
