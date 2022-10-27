@@ -26,7 +26,7 @@ const HeroSection = ({ socials }: Props) => {
       <div className="flex flex-col items-center">
         <div className="overflow-hidden rounded-full">
           <Image
-            src="/images/avatar/xin2.webp"
+            src="/images/avatar/me.webp"
             width={180}
             height={180}
             alt="avatar"
@@ -53,7 +53,7 @@ const HeroSection = ({ socials }: Props) => {
           ))}
         </div>
         <Button className="mt-5 px-8">
-          <Link href="https://xintipi.github.io/">Hire me</Link>
+          <Link href={process.env.NEXT_PUBLIC_OTHER_DOMAIN as string}>Hire me</Link>
         </Button>
       </div>
 

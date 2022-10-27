@@ -16,10 +16,7 @@ type Props = {
 
 const Home: FC<Props> = ({ socials, about }) => {
   return (
-    <Layout
-      title="Home"
-      desciption={about[0].description}
-      keywords="Nguyen Huu Trung, Xintipi, Frontend Developer, Mail me">
+    <Layout title="Home" desciption={about[0].description}>
       <HeroSection socials={socials} />
 
       <section className="container pt-20 pb-10">

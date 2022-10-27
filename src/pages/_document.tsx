@@ -1,5 +1,6 @@
 import { NextPageContext } from 'next'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
+import { NextSeo } from 'next-seo'
 import React from 'react'
 
 class MyDocument extends Document {
@@ -20,24 +21,6 @@ class MyDocument extends Document {
             defer
             data-domain="portfolio-xintipi.vercel.app"
             src="https://plausible.io/js/plausible.js"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="https://i.ibb.co/58BpJgP/favicon-16.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="https://i.ibb.co/VqNBMxR/favicon-32.png"
-          />
-          <link
-            rel="applue-touch-icon"
-            type="image/png"
-            sizes="180x180"
-            href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png"
           />
         </Head>
         <body>
