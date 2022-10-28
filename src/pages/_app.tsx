@@ -3,8 +3,7 @@ import 'react-tippy/dist/tippy.css'
 
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { NextSeo, SocialProfileJsonLd } from 'next-seo'
-import React, { useEffect, useMemo } from 'react'
+import React, { useEffect } from 'react'
 import { Provider } from 'react-redux'
 
 import { ThemeProvider } from '@/hooks/useTheme'
