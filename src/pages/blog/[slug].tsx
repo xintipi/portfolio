@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import absoluteUrl from 'next-absolute-url/index'
+import { ArticleJsonLd } from 'next-seo'
 import React, { FC, useMemo } from 'react'
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 
@@ -43,6 +44,32 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
       canonical={`${host}/blog/${post.slug}`}
       description={post.description}
       openGraph={openGraph}>
+      <ArticleJsonLd
+        url="https://example.com/article"
+        title="Article headline"
+        images={[
+          'https://example.com/photos/1x1/photo.jpg',
+          'https://example.com/photos/4x3/photo.jpg',
+          'https://example.com/photos/16x9/photo.jpg',
+        ]}
+        datePublished="2015-02-05T08:00:00+08:00"
+        dateModified="2015-02-05T09:00:00+08:00"
+        authorName={[
+          {
+            name: 'Jane Blogs',
+            url: 'https://example.com',
+          },
+          {
+            name: 'Mary Stone',
+            url: 'https://example.com',
+          },
+        ]}
+        publisherName="Gary Meehan"
+        publisherLogo="https://www.example.com/photos/logo.jpg"
+        description="This is a mighty good description of this article."
+        isAccessibleForFree={true}
+      />
+
       <div className="container mb-10">
         <div className="mt-24 flex flex-col items-center justify-center">
           <h1 className="text-center text-2xl font-semibold sm:text-3xl md:text-4xl">
