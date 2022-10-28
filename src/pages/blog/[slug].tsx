@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import absoluteUrl from 'next-absolute-url/index'
