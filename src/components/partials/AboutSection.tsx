@@ -1,10 +1,11 @@
+import clsx from 'clsx'
 import Link from 'next/link'
 import { FC } from 'react'
 import { HiOutlineChartBar, HiOutlineFire } from 'react-icons/hi'
 
-import Button from '@/components/form/Button'
 import ProgressBar from '@/components/shared/ProgressBar'
 import SectionTitle from '@/components/shared/SectionTitle'
+import styles from '@/styles/modules/Button.module.scss'
 
 const AboutSection: FC<{ about: string }> = ({ about }) => {
   return (
@@ -15,11 +16,12 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
         {/* Bio */}
         <div>
           <p className="whitespace-pre-line text-justify">{about}</p>
-          <Button className="mt-5">
-            <Link href="/cv/Nguyen_Huu_Trung_Cover_Letter.pdf" target="_blank">
-              Downlad CV
-            </Link>
-          </Button>
+          <Link
+            href="/cv/Nguyen_Huu_Trung_Cover_Letter.pdf"
+            className={clsx(styles.btn, 'mt-5')}
+            target="_blank">
+            Download CV
+          </Link>
         </div>
 
         {/* Skills */}

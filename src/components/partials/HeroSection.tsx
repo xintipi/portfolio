@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { memo } from 'react'
@@ -5,8 +6,8 @@ import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import { Tooltip } from 'react-tippy'
 import Typed from 'react-typed'
 
-import Button from '@/components/form/Button'
 import { SocialInterface } from '@/interface/social.interface'
+import styles from '@/styles/modules/Button.module.scss'
 
 import HeroBackground from './HeroBackground'
 
@@ -46,9 +47,11 @@ const HeroSection = ({ socials }: Props) => {
             </Tooltip>
           ))}
         </div>
-        <Button className="mt-5 px-8">
-          <Link href={process.env.NEXT_PUBLIC_OTHER_DOMAIN as string}>Hire me</Link>
-        </Button>
+        <Link
+          href={process.env.NEXT_PUBLIC_OTHER_DOMAIN as string}
+          className={clsx(styles.btn, 'mt-5 px-8')}>
+          Hire me
+        </Link>
       </div>
 
       <div className="absolute bottom-0 flex flex-col items-center ">
