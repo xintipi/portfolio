@@ -3,12 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import absoluteUrl from 'next-absolute-url/index'
 import { ArticleJsonLd } from 'next-seo'
-import React, { FC, Fragment, useMemo } from 'react'
+import React, { FC, Fragment } from 'react'
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 
 import CommentBox from '@/components/partials/CommentBox'
 import RecentComment from '@/components/partials/RecentComment'
-import StructuredData from '@/components/partials/StructuredData'
 import { posts } from '@/data/posts'
 import { PostInterface } from '@/interface/post.interface'
 import Layout from '@/layouts/Layout'
@@ -19,44 +18,22 @@ type Props = {
 }
 
 const BlogSingle: FC<Props> = ({ post, host }) => {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'article',
-    headline: post.title,
-    description: post.description,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`,
-    },
-    author: [
-      {
-        '@type': 'Person',
-        name: post.authorName,
-        url: '',
-      },
-    ],
-    image: [`${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`],
-    datePublished: post.publishedAt,
-    dateModified: '',
-  }
-
   return (
     <Fragment>
-      {/*<ArticleJsonLd*/}
-      {/*  key={`blogJSON-${post.id}`}*/}
-      {/*  url={`${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`}*/}
-      {/*  title={post.title}*/}
-      {/*  images={[`${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`]}*/}
-      {/*  datePublished={post.publishedAt}*/}
-      {/*  authorName={post.authorName}*/}
-      {/*  description={post.description}*/}
-      {/*  isAccessibleForFree={true}*/}
-      {/*/>*/}
-
-      {/*<StructuredData data={structuredData} />*/}
+      <ArticleJsonLd
+        key={`blogJSON-${post.id}`}
+        url={`${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`}
+        title={post.title}
+        images={[`${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`]}
+        datePublished={post.publishedAt}
+        authorName={post.authorName}
+        description={post.description}
+        isAccessibleForFree={true}
+      />
 
       <Layout
         title={post.title}
+        canonical={`${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`}
         description={post.description}
         openGraph={{
           description: post.description,
