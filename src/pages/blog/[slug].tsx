@@ -53,7 +53,7 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
       {/*  isAccessibleForFree={true}*/}
       {/*/>*/}
 
-      <StructuredData data={structuredData} />
+      {/*<StructuredData data={structuredData} />*/}
 
       <Layout
         title={post.title}
