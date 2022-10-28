@@ -14,13 +14,18 @@ interface Props {
   openGraph?: OpenGraph
 }
 
-const Layout: FC<Props> = ({ children, title, ...props }) => {
+const Layout: FC<Props> = ({ children, title, description, canonical, openGraph }) => {
   const appName = process.env.NEXT_PUBLIC_APP_NAME
   const pageTitle = title ? `${title} - ${appName}` : appName
 
   return (
     <>
-      <NextSeo title={pageTitle} {...props} />
+      <NextSeo
+        title={pageTitle}
+        description={description}
+        canonical={canonical}
+        openGraph={openGraph}
+      />
 
       <Header />
 

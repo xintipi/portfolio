@@ -36,7 +36,7 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
       {/*  description="This is a mighty good description of this blog."*/}
       {/*/>*/}
 
-      <Layout title="Blog" canonical={`${host}/blog/${post.slug}`} description={post.description}>
+      <Layout title="Blog" description={post.description}>
         <div className="container mb-10">
           <div className="mt-24 flex flex-col items-center justify-center">
             <h1 className="text-center text-2xl font-semibold sm:text-3xl md:text-4xl">
