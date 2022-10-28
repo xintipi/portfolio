@@ -38,7 +38,6 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
 
       <Layout
         title="Blog"
-        canonical={`${host}/blog/${post.slug}`}
         description={post.description}
         openGraph={{
           description: post.description,
