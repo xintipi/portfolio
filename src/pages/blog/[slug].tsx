@@ -18,26 +18,6 @@ type Props = {
 }
 
 const BlogSingle: FC<Props> = ({ post, host }) => {
-  const openGraph = useMemo(() => {
-    return {
-      description: post.description,
-      title: `Blog | ${process.env.NEXT_PUBLIC_APP_NAME}`,
-      url: `${host}/blog/${post.slug}`,
-      type: 'article',
-      article: {
-        publishedTime: post.publishedAt,
-        tags: ['NextJS', 'ReactJS'],
-      },
-      images: [
-        {
-          url: `${host}${post.imageUrl}`,
-          width: 1280,
-          height: 720,
-        },
-      ],
-    }
-  }, [host])
-
   return (
     <Fragment>
       {/*<ArticleJsonLd*/}
@@ -60,7 +40,23 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
         title="Blog"
         canonical={`${host}/blog/${post.slug}`}
         description={post.description}
-        openGraph={openGraph}>
+        openGraph={{
+          description: post.description,
+          title: `Blog | ${process.env.NEXT_PUBLIC_APP_NAME}`,
+          url: `${host}/blog/${post.slug}`,
+          type: 'blog',
+          article: {
+            publishedTime: post.publishedAt,
+            tags: ['NextJS', 'ReactJS'],
+          },
+          images: [
+            {
+              url: `${host}${post.imageUrl}`,
+              width: 1280,
+              height: 720,
+            },
+          ],
+        }}>
         <div className="container mb-10">
           <div className="mt-24 flex flex-col items-center justify-center">
             <h1 className="text-center text-2xl font-semibold sm:text-3xl md:text-4xl">
