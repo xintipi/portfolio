@@ -32,23 +32,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [events])
 
-  const additionalLinkTags = useMemo(() => {
-    return [
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: 'https://i.ibb.co/58BpJgP/favicon-16.png',
-      },
-      {
-        rel: 'applue-touch-icon',
-        type: 'image/png',
-        sizes: '180x180',
-        href: 'https://i.ibb.co/25ZVR47/apple-touch-icon-180.png',
-      },
-    ]
-  }, [])
-
   const openGraph = useMemo(() => {
     return {
       url: process.env.NEXT_PUBLIC_DOMAIN,
@@ -68,10 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store as Store}>
-      <NextSeo
-        openGraph={pathname !== '/blog/[slug]' ? openGraph : {}}
-        additionalLinkTags={additionalLinkTags}
-      />
+      <NextSeo openGraph={pathname !== '/blog/[slug]' ? openGraph : {}} />
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>

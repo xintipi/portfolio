@@ -22,9 +22,16 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
       description: post.description,
       title: `Blog | ${process.env.NEXT_PUBLIC_APP_NAME}`,
       url: `${host}/blog/${post.slug}`,
+      type: 'article',
+      article: {
+        publishedTime: post.publishedAt,
+        tags: ['NextJS', 'ReactJS'],
+      },
       images: [
         {
           url: `${host}${post.imageUrl}`,
+          width: 1280,
+          height: 720,
         },
       ],
     }
