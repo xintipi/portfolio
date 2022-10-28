@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import absoluteUrl from 'next-absolute-url/index'
+import { ArticleJsonLd } from 'next-seo'
 import React, { FC, Fragment, useMemo } from 'react'
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 
@@ -40,35 +41,21 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
 
   return (
     <Fragment>
-      <Head>
-        <script
-          key={`jobJSON-${post.id}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `
-              "@context": "https://schema.org",
-              "@type": "NewsArticle",
-              "headline": "Title of a News Article",
-              "image": [
-                "https://example.com/photos/1x1/photo.jpg",
-                "https://example.com/photos/4x3/photo.jpg",
-                "https://example.com/photos/16x9/photo.jpg"
-               ],
-              "datePublished": "2015-02-05T08:00:00+08:00",
-              "dateModified": "2015-02-05T09:20:00+08:00",
-              "author": [{
-                  "@type": "Person",
-                  "name": "Jane Doe",
-                  "url": "https://example.com/profile/janedoe123"
-                },{
-                  "@type": "Person",
-                  "name": "John Doe",
-                  "url": "https://example.com/profile/johndoe123"
-              }]
-            `,
-          }}
-        />
-      </Head>
+      <ArticleJsonLd
+        key={`blogJSON-${post.id}`}
+        type="BlogPosting"
+        url="https://example.com/blog"
+        title="Blog headline"
+        images={[
+          'https://example.com/photos/1x1/photo.jpg',
+          'https://example.com/photos/4x3/photo.jpg',
+          'https://example.com/photos/16x9/photo.jpg',
+        ]}
+        datePublished="2015-02-05T08:00:00+08:00"
+        dateModified="2015-02-05T09:00:00+08:00"
+        authorName="Jane Blogs"
+        description="This is a mighty good description of this blog."
+      />
 
       <Layout
         title="Blog"
