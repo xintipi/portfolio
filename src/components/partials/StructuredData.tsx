@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-export default function StructuredData({ data }: { data: string }) {
+// @ts-ignore
+export default function StructuredData({ data }) {
   return (
     <Head>
       <script

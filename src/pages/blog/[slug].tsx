@@ -8,6 +8,7 @@ import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 
 import CommentBox from '@/components/partials/CommentBox'
 import RecentComment from '@/components/partials/RecentComment'
+import StructuredData from '@/components/partials/StructuredData'
 import { posts } from '@/data/posts'
 import { PostInterface } from '@/interface/post.interface'
 import Layout from '@/layouts/Layout'
@@ -18,6 +19,27 @@ type Props = {
 }
 
 const BlogSingle: FC<Props> = ({ post, host }) => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'article',
+    headline: post.title,
+    description: post.description,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`,
+    },
+    author: [
+      {
+        '@type': 'Person',
+        name: post.authorName,
+        url: '',
+      },
+    ],
+    image: [`${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`],
+    datePublished: post.publishedAt,
+    dateModified: '',
+  }
+
   return (
     <Fragment>
       {/*<ArticleJsonLd*/}
@@ -30,6 +52,8 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
       {/*  description={post.description}*/}
       {/*  isAccessibleForFree={true}*/}
       {/*/>*/}
+
+      <StructuredData data={structuredData} />
 
       <Layout
         title={post.title}
