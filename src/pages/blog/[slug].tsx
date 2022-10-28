@@ -20,21 +20,16 @@ type Props = {
 const BlogSingle: FC<Props> = ({ post, host }) => {
   return (
     <Fragment>
-      {/*<ArticleJsonLd*/}
-      {/*  key={`blogJSON-${post.id}`}*/}
-      {/*  type="BlogPosting"*/}
-      {/*  url="https://example.com/blog"*/}
-      {/*  title="Blog headline"*/}
-      {/*  images={[*/}
-      {/*    'https://example.com/photos/1x1/photo.jpg',*/}
-      {/*    'https://example.com/photos/4x3/photo.jpg',*/}
-      {/*    'https://example.com/photos/16x9/photo.jpg',*/}
-      {/*  ]}*/}
-      {/*  datePublished="2015-02-05T08:00:00+08:00"*/}
-      {/*  dateModified="2015-02-05T09:00:00+08:00"*/}
-      {/*  authorName="Jane Blogs"*/}
-      {/*  description="This is a mighty good description of this blog."*/}
-      {/*/>*/}
+      <ArticleJsonLd
+        key={`blogJSON-${post.id}`}
+        url={`${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`}
+        title={post.title}
+        images={[`${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`]}
+        datePublished={post.publishedAt}
+        authorName={post.authorName}
+        description={post.description}
+        isAccessibleForFree={true}
+      />
 
       <Layout
         title="Blog"
@@ -43,7 +38,7 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
           description: post.description,
           title: `Blog | ${process.env.NEXT_PUBLIC_APP_NAME}`,
           url: `${host}/blog/${post.slug}`,
-          type: 'blog',
+          type: 'article',
           article: {
             publishedTime: post.publishedAt,
             tags: ['NextJS', 'ReactJS'],
