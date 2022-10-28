@@ -1,6 +1,5 @@
 import { NextPageContext } from 'next'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
-import { SocialProfileJsonLd } from 'next-seo'
 import React from 'react'
 
 class MyDocument extends Document {
@@ -31,16 +30,6 @@ class MyDocument extends Document {
             href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png"
           />
           {/*Social profile json*/}
-          <SocialProfileJsonLd
-            type="Person"
-            name="Nguyen Huu Trung"
-            url={`${process.env.NEXT_PUBLIC_DOMAIN}`}
-            sameAs={[
-              'https://www.facebook.com/huutrung.mmt',
-              'https://www.instagram.com/n.h.trung_xinn/',
-              'https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/',
-            ]}
-          />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
