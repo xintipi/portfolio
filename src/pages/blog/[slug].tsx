@@ -36,7 +36,7 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
         description={post.description}
         openGraph={{
           description: post.description,
-          title: `Blog | ${process.env.NEXT_PUBLIC_APP_NAME}`,
+          title: `${post.title} - ${process.env.NEXT_PUBLIC_APP_NAME}`,
           url: `${host}/blog/${post.slug}`,
           type: 'article',
           article: {
