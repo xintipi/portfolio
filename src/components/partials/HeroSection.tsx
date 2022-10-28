@@ -25,7 +25,7 @@ const HeroSection = ({ socials }: Props) => {
       <HeroBackground />
       <div className="flex flex-col items-center">
         <div className="overflow-hidden rounded-full">
-          <Image src="/images/avatar/me.webp" width={180} height={180} alt="avatar" />
+          <Image src="/images/avatar/me.webp" width={180} height={180} alt="avatar" priority />
         </div>
         <h1 className="mt-4 text-3xl font-bold ">Nguyen Huu Trung</h1>
         <div className="mt-2 flex gap-1">

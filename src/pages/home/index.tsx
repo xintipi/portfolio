@@ -1,6 +1,4 @@
 import { GetStaticProps } from 'next'
-import Head from 'next/head'
-import { SocialProfileJsonLd } from 'next-seo'
 import React, { FC, Fragment, useMemo } from 'react'
 
 import AboutSection from '@/components/partials/AboutSection'
