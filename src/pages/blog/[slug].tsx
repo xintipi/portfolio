@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import absoluteUrl from 'next-absolute-url/index'
-import { ArticleJsonLd } from 'next-seo'
 import React, { FC, Fragment, useMemo } from 'react'
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 
