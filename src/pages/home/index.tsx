@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next'
 import { SocialProfileJsonLd } from 'next-seo'
-import { FC } from 'react'
+import { FC, Fragment } from 'react'
 
 import AboutSection from '@/components/partials/AboutSection'
 import HeroSection from '@/components/partials/HeroSection'
@@ -17,26 +17,17 @@ type Props = {
 
 const Home: FC<Props> = ({ socials, about }) => {
   return (
-    <Layout
-      title="XIN - Developer"
-      description="Frontend Developer, UI Designer, and Open Source Advocate.">
-      {/*<SocialProfileJsonLd*/}
-      {/*  type="Person"*/}
-      {/*  name="Nguyen Huu Trung"*/}
-      {/*  url={process.env.NEXT_PUBLIC_DOMAIN as string}*/}
-      {/*  sameAs={[*/}
-      {/*    'https://www.facebook.com/huutrung.mmt',*/}
-      {/*    'https://www.instagram.com/n.h.trung_xinn/',*/}
-      {/*    'https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/',*/}
-      {/*  ]}*/}
-      {/*/>*/}
+    <Fragment>
+      <Layout
+        title="XIN - Developer"
+        description="Frontend Developer, UI Designer, and Open Source Advocate.">
+        <HeroSection socials={socials} />
 
-      <HeroSection socials={socials} />
-
-      <section className="container pt-20 pb-10">
-        <AboutSection about={about[0].description} />
-      </section>
-    </Layout>
+        <section className="container pt-20 pb-10">
+          <AboutSection about={about[0].description} />
+        </section>
+      </Layout>
+    </Fragment>
   )
 }
 

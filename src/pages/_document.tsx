@@ -1,5 +1,6 @@
 import { NextPageContext } from 'next'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
+import { SocialProfileJsonLd } from 'next-seo'
 import React from 'react'
 
 class MyDocument extends Document {
