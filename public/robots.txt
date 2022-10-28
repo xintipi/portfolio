@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://portfolio-xintipi.vercel.app/
+Host: https://xintipi.xyz/
 
 # Sitemaps
-Sitemap: https://portfolio-xintipi.vercel.app/sitemap.xml
-Sitemap: https://portfolio-xintipi.vercel.app/server-sitemap.xml
+Sitemap: https://xintipi.xyz/sitemap.xml
+Sitemap: https://xintipi.xyz/server-sitemap.xml
