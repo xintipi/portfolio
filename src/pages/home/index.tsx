@@ -18,8 +18,8 @@ type Props = {
 const Home: FC<Props> = ({ socials, about }) => {
   return (
     <Layout
-      title="Home"
-      description="'Frontend Developer, Nguyen Huu Trung, Ho Chi Minh, Viet Nam, nickname Xintipi and Hire me.'">
+      title="XIN - Developer"
+      description="Frontend Developer, UI Designer, and Open Source Advocate.">
       {/*<SocialProfileJsonLd*/}
       {/*  type="Person"*/}
       {/*  name="Nguyen Huu Trung"*/}

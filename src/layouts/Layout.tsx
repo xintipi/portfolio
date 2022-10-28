@@ -15,7 +15,7 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({ children, title, description, canonical, openGraph }) => {
-  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Xintipi'
+  const appName = process.env.NEXT_PUBLIC_APP_NAME
   const pageTitle = title ? `${title} - ${appName}` : appName
 
   return (

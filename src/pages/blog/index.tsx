@@ -6,7 +6,9 @@ import Layout from '@/layouts/Layout'
 
 const Blog = () => {
   return (
-    <Layout title="Blog">
+    <Layout
+      title="Blog"
+      description="Blog - News, pictures, LATEST BLOG or programming articles, update personal stories at Xintipi.xyz">
       <PageTitle
         breadcrumb={[
           { label: 'Home', path: '/' },

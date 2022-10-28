@@ -13,25 +13,10 @@ class MyDocument extends Document {
   render() {
     // @ts-ignore
     const { lang } = this.props
+    // @ts-ignore
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
         <Head>
-          {/*Browser favicons - 16x16*/}
-          {/*Taskbar shortcut icons – 32x32*/}
-          {/*Desktop shortcut icons – 96x96*/}
-          {/*Apple touch icons – 180x180*/}
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="https://i.ibb.co/58BpJgP/favicon-16.png"
-          />
-          <link
-            rel="applue-touch-icon"
-            type="image/png"
-            sizes="180x180"
-            href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png"
-          />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
