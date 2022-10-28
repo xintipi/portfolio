@@ -7,12 +7,27 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx as DocumentContext)
     const { query } = ctx
     const lang = query.lang === 'vi' ? 'vi' : 'en'
-    return { ...initialProps, lang }
+
+    const socialProfileJsonLd = {
+      __html: `
+        "@context":"https://schema.org",
+        "@type":"Person",
+        "name":"Nguyen Huu Trung",
+        "url":"${process.env.NEXT_PUBLIC_DOMAIN}",
+        "sameAs":[
+          "https://www.facebook.com/huutrung.mmt",
+          "https://www.instagram.com/n.h.trung_xinn/",
+          "https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/"
+          ]
+        `,
+    }
+
+    return { ...initialProps, lang, socialProfileJsonLd }
   }
 
   render() {
     // @ts-ignore
-    const { lang } = this.props
+    const { lang, socialProfileJsonLd } = this.props
     // @ts-ignore
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
@@ -29,6 +44,7 @@ class MyDocument extends Document {
             sizes="180x180"
             href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png"
           />
+          <script type="application/ld+json" dangerouslySetInnerHTML={socialProfileJsonLd} />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
