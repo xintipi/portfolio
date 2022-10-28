@@ -34,24 +34,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store as Store}>
-      <NextSeo
-        additionalLinkTags={[
-          {
-            rel: 'icon',
-            sizes: '16x16',
-            type: 'image/png',
-            href: 'https://i.ibb.co/58BpJgP/favicon-16.png',
-            keyOverride: 'favicon-browser',
-          },
-          {
-            rel: 'applue-touch-icon',
-            sizes: '180x180',
-            type: 'image/png',
-            href: 'https://i.ibb.co/25ZVR47/apple-touch-icon-180.png',
-            keyOverride: 'favicon-apple',
-          },
-        ]}
-      />
       {/*Social profile json*/}
       <SocialProfileJsonLd
         key="social-profile"
