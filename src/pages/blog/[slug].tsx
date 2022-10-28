@@ -42,6 +42,7 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
     <Fragment>
       <Head>
         <script
+          key={`jobJSON-${post.id}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `
