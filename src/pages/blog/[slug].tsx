@@ -20,19 +20,19 @@ type Props = {
 const BlogSingle: FC<Props> = ({ post, host }) => {
   return (
     <Fragment>
-      <ArticleJsonLd
-        key={`blogJSON-${post.id}`}
-        url={`${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`}
-        title={post.title}
-        images={[`${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`]}
-        datePublished={post.publishedAt}
-        authorName={post.authorName}
-        description={post.description}
-        isAccessibleForFree={true}
-      />
+      {/*<ArticleJsonLd*/}
+      {/*  key={`blogJSON-${post.id}`}*/}
+      {/*  url={`${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`}*/}
+      {/*  title={post.title}*/}
+      {/*  images={[`${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`]}*/}
+      {/*  datePublished={post.publishedAt}*/}
+      {/*  authorName={post.authorName}*/}
+      {/*  description={post.description}*/}
+      {/*  isAccessibleForFree={true}*/}
+      {/*/>*/}
 
       <Layout
-        title="Blog"
+        title={post.title}
         description={post.description}
         openGraph={{
           description: post.description,
