@@ -2,7 +2,9 @@ import { GetStaticProps } from 'next'
 import React, { FC, Fragment, useMemo } from 'react'
 
 import AboutSection from '@/components/partials/AboutSection'
+import ExperienceSection from '@/components/partials/ExperienceSection'
 import HeroSection from '@/components/partials/HeroSection'
+import RecentWorkSection from '@/components/partials/RecentWorkSection'
 import { AboutMeInterface } from '@/interface/aboutMe.interface'
 import { SocialInterface } from '@/interface/social.interface'
 import Layout from '@/layouts/Layout'
@@ -46,6 +48,12 @@ const Home: FC<Props> = ({ socials, about }) => {
         <HeroSection socials={socials} />
         <section className="container pt-20 pb-10">
           <AboutSection about={about[0].description} />
+        </section>
+        <section className="container py-16">
+          <ExperienceSection />
+        </section>
+        <section className="container py-16">
+          <RecentWorkSection />
         </section>
       </Layout>
     </Fragment>
