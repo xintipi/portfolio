@@ -4,7 +4,6 @@ import { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import { getServerSideSitemap, ISitemapField } from 'next-sitemap'
 
 import { posts } from '@/data/posts'
-import { works } from '@/data/works'
 
 export const getServerSideProps: GetServerSideProps = async (ctx: GetServerSidePropsContext) => {
   // Method to source urls from cms
@@ -13,14 +12,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx: GetServerSideP
   const fields: ISitemapField[] = posts.map((item) => ({
     loc: `${process.env.NEXT_PUBLIC_DOMAIN}blog/${item.slug}`,
     lastmod: new Date().toISOString(),
+    priority: 0.7,
+    changefreq: 'daily',
   }))
-
-  works.map((item) => {
-    fields.push({
-      loc: `${process.env.NEXT_PUBLIC_DOMAIN}works/${item.slug}`,
-      lastmod: new Date().toISOString(),
-    })
-  })
 
   return getServerSideSitemap(ctx, fields)
 }
