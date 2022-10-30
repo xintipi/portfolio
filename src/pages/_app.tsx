@@ -2,6 +2,7 @@ import '@/styles/index.scss'
 import 'react-tippy/dist/tippy.css'
 
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { SocialProfileJsonLd } from 'next-seo'
 import NProgress from 'nprogress'
@@ -39,16 +40,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store as Store}>
-      <SocialProfileJsonLd
-        type="Person"
-        name="Nguyen Huu Trung"
-        url={`${process.env.NEXT_PUBLIC_DOMAIN}`}
-        sameAs={[
-          'https://www.facebook.com/huutrung.mmt',
-          'https://www.instagram.com/n.h.trung_xinn/',
-          'https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/',
-        ]}
-      />
+      <Head>
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_DOMAIN}/style/nprogress.css`} />
+        <link rel="icon" href="https://i.ibb.co/58BpJgP/favicon-16.png" />
+        <link rel="apple-touch-icon" href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png" />
+      </Head>
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>
