@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="https://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="https://www.w3.org/1999/xhtml" xmlns:mobile="https://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1" xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://xintipi.xyz/blog</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/contact</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/home</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/works</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/blog/create-and-use-api-routes-in-nextjs</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/blog/custom-layouts-in-nextjs</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/blog/generating-blur-for-dynamic-images-nextjs</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/blog/improving-chakra-ui-page-speed</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/blog/using-nextjs-server-side-rendering-method</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/blog/using-nextjs-static-generation-method</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://xintipi.xyz/blog/Eius-et-ipsum-occaecati-dicta-aut-quaerat</loc><lastmod>2022-10-30T17:10:39.397Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/blog</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/contact</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/home</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/works</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/blog/create-and-use-api-routes-in-nextjs</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/blog/custom-layouts-in-nextjs</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/blog/generating-blur-for-dynamic-images-nextjs</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/blog/improving-chakra-ui-page-speed</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/blog/using-nextjs-server-side-rendering-method</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/blog/using-nextjs-static-generation-method</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://xintipi.xyz/blog/Eius-et-ipsum-occaecati-dicta-aut-quaerat</loc><lastmod>2022-10-30T18:12:46.936Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

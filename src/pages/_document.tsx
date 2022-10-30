@@ -2,13 +2,13 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
   DocumentProps,
-  Head,
   Html,
   Main,
   NextScript,
 } from 'next/document'
 import React from 'react'
 
+import DocumentHead from '@/components/shared/DocumentHead'
 import { GA_TRACKING_ID } from '@/lib/analytics'
 
 type Props = DocumentInitialProps & {
@@ -42,7 +42,7 @@ class MyDocument extends Document<DocumentProps | unknown> {
     const { lang } = this.props
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
-        <Head>
+        <DocumentHead>
           <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_DOMAIN}/style/nprogress.css`} />
           <link rel="shortcut icon" href="https://i.ibb.co/58BpJgP/favicon-16.png" />
           <link rel="apple-touch-icon" href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png" />
@@ -60,7 +60,7 @@ class MyDocument extends Document<DocumentProps | unknown> {
                 `,
             }}
           />
-        </Head>
+        </DocumentHead>
         <body>
           <Main />
           <NextScript />
