@@ -43,6 +43,10 @@ class MyDocument extends Document<DocumentProps | unknown> {
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
         <Head>
+          <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_DOMAIN}/style/nprogress.css`} />
+          <link rel="shortcut icon" href="https://i.ibb.co/58BpJgP/favicon-16.png" />
+          <link rel="apple-touch-icon" href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png" />
+
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{

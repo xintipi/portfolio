@@ -40,11 +40,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store as Store}>
-      <Head>
-        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_DOMAIN}/style/nprogress.css`} />
-        <link rel="icon" href="https://i.ibb.co/58BpJgP/favicon-16.png" />
-        <link rel="apple-touch-icon" href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png" />
-      </Head>
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>
