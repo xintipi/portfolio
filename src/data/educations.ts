@@ -1,6 +1,6 @@
-import { Education } from '@/types'
+import { EducationInterface } from '@/interface/education.interface'
 
-export const educations: Education[] = [
+export const educations: EducationInterface[] = [
   {
     degree: 'Bachelor of Science',
     school: 'University of California',
