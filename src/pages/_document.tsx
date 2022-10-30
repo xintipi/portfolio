@@ -1,14 +1,40 @@
-import { NextPageContext } from 'next'
-import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
+import Document, {
+  DocumentContext,
+  DocumentInitialProps,
+  DocumentProps,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document'
 import React from 'react'
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: NextPageContext) {
-    const initialProps = await Document.getInitialProps(ctx as DocumentContext)
+import { GA_TRACKING_ID } from '@/lib/analytics'
+
+type Props = DocumentInitialProps & {
+  lang: string
+}
+
+class MyDocument extends Document<DocumentProps | unknown> {
+  static async getInitialProps(ctx: DocumentContext): Promise<Props> {
+    const originalRenderPage = ctx.renderPage
+    const initialProps = await Document.getInitialProps(ctx)
     const { query } = ctx
     const lang = query.lang === 'vi' ? 'vi' : 'en'
 
-    return { ...initialProps, lang }
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) => <App {...props} />,
+        })
+    } catch (error) {
+      console.log(error)
+    }
+    return {
+      ...initialProps,
+      lang,
+      styles: <>{initialProps.styles}</>,
+    }
   }
 
   render() {
@@ -17,21 +43,21 @@ class MyDocument extends Document {
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
         <Head>
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-          />
+          <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_DOMAIN}style/nprogress.css`} />
+          <link rel="shortcut icon" href="https://i.ibb.co/58BpJgP/favicon-16.png" />
+          <link rel="apple-touch-icon" href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png" />
+
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                  page_path: window.location.pathname,
-                });
-              `,
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_TRACKING_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
             }}
           />
         </Head>

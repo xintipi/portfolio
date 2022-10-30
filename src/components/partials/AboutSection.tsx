@@ -17,7 +17,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
         <div>
           <p className="whitespace-pre-line text-justify">{about}</p>
           <Link
-            href="/cv/Nguyen_Huu_Trung_Cover_Letter.pdf"
+            href="/file/Nguyen_Huu_Trung_Cover_Letter.pdf"
             className={clsx(styles.btn, 'mt-5')}
             target="_blank">
             Download CV

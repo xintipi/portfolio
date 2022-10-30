@@ -1,3 +1,5 @@
+/// <reference types="gtag.js" />
+
 import { ReactNode } from 'react'
 import { TooltipProps as Props } from 'react-tippy'
 
@@ -7,8 +9,4 @@ declare module 'react-tippy' {
   }
 }
 
-declare global {
-  interface Window {
-    gtag: never
-  }
-}
+declare module 'gtag.js'
