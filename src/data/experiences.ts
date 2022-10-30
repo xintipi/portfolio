@@ -1,6 +1,6 @@
-import { Experience } from '@/types'
+import { ExperienceInterface } from '@/interface/experience.interface'
 
-export const experiences: Experience[] = [
+export const experiences: ExperienceInterface[] = [
   {
     jobTitle: 'Frontend Developer',
     company: 'Google LLC',
