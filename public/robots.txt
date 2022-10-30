@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://xintipi.xyz/
+Host: https://xintipi.xyz
 
 # Sitemaps
 Sitemap: https://xintipi.xyz/sitemap.xml

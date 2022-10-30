@@ -34,9 +34,9 @@ const WorkDetail: FC<Props> = ({ work, host }) => {
     <>
       <ArticleJsonLd
         key={`blogJSON-${work.id}`}
-        url={`${process.env.NEXT_PUBLIC_DOMAIN}works/${work.slug}`}
+        url={`${process.env.NEXT_PUBLIC_DOMAIN}/works/${work.slug}`}
         title={work.title}
-        images={[`${process.env.NEXT_PUBLIC_DOMAIN}${work.thumbnailUrl}`]}
+        images={[`${process.env.NEXT_PUBLIC_DOMAIN}/${work.thumbnailUrl}`]}
         datePublished={work.publishedAt}
         description={work.description}
         isAccessibleForFree={true}
@@ -45,7 +45,7 @@ const WorkDetail: FC<Props> = ({ work, host }) => {
 
       <Layout
         title={work.title}
-        canonical={`${process.env.NEXT_PUBLIC_DOMAIN}works/${work.slug}`}
+        canonical={`${process.env.NEXT_PUBLIC_DOMAIN}/works/${work.slug}`}
         description={work.description}
         openGraph={{
           description: work.description,

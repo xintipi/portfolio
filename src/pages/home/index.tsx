@@ -30,7 +30,7 @@ const Home: FC<Props> = ({ socials, about }) => {
       },
       images: [
         {
-          url: process.env.NEXT_PUBLIC_DOMAIN + 'images/avatar/me.webp',
+          url: process.env.NEXT_PUBLIC_DOMAIN + '/images/avatar/me.webp',
           width: 1024,
           height: 1024,
           alt: 'Profile photo',

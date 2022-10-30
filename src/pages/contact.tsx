@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <>
       <CorporateContactJsonLd
-        url={`${process.env.NEXT_PUBLIC_DOMAIN}contact`}
+        url={`${process.env.NEXT_PUBLIC_DOMAIN}/contact`}
         contactPoint={[
           {
             telephone: '+84986-607-599',

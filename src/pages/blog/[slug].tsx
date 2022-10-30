@@ -22,9 +22,9 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
     <Fragment>
       <ArticleJsonLd
         key={`blogJSON-${post.id}`}
-        url={`${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`}
+        url={`${process.env.NEXT_PUBLIC_DOMAIN}/blog/${post.slug}`}
         title={post.title}
-        images={[`${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`]}
+        images={[`${process.env.NEXT_PUBLIC_DOMAIN}/${post.imageUrl}`]}
         datePublished={post.publishedAt}
         authorName={post.authorName}
         description={post.description}
@@ -33,7 +33,7 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
 
       <Layout
         title={post.title}
-        canonical={`${process.env.NEXT_PUBLIC_DOMAIN}blog/${post.slug}`}
+        canonical={`${process.env.NEXT_PUBLIC_DOMAIN}/blog/${post.slug}`}
         description={post.description}
         openGraph={{
           description: post.description,
