@@ -1,7 +1,6 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import absoluteUrl from 'next-absolute-url/index'
 import { ArticleJsonLd } from 'next-seo'
 import React, { FC, Fragment } from 'react'
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
@@ -14,14 +13,13 @@ import Layout from '@/layouts/Layout'
 
 type Props = {
   post: PostInterface
-  host: string
 }
 
-const BlogSingle: FC<Props> = ({ post, host }) => {
+const BlogSingle: FC<Props> = ({ post }) => {
   return (
     <Fragment>
       <ArticleJsonLd
-        key={`blogJSON-${post.id}`}
+        key={`blogJSON-${post.slug}`}
         url={`${process.env.NEXT_PUBLIC_DOMAIN}/blog/${post.slug}`}
         title={post.title}
         images={[`${process.env.NEXT_PUBLIC_DOMAIN}/${post.imageUrl}`]}
@@ -38,7 +36,7 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
         openGraph={{
           description: post.description,
           title: `${post.title} - ${process.env.NEXT_PUBLIC_APP_NAME}`,
-          url: `${host}/blog/${post.slug}`,
+          url: `${process.env.NEXT_PUBLIC_DOMAIN}/blog/${post.slug}`,
           type: 'article',
           article: {
             publishedTime: post.publishedAt,
@@ -46,7 +44,7 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
           },
           images: [
             {
-              url: `${host}${post.imageUrl}`,
+              url: `${process.env.NEXT_PUBLIC_DOMAIN}${post.imageUrl}`,
               width: 1280,
               height: 720,
             },
@@ -107,21 +105,47 @@ const BlogSingle: FC<Props> = ({ post, host }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { origin } = absoluteUrl(context.req)
+export const getStaticProps: GetStaticProps = async (context) => {
   const slug = context.params?.slug as string
+  // let post = await fetch(`https://jsonplaceholder.typicode.com/posts?slug=${slug}`)
   const post = posts.find((post) => post.slug === slug)
   if (post) {
     return {
       props: {
         post,
-        host: origin,
       },
+      revalidate: 10,
     }
   }
 
   return {
     notFound: true,
+    props: {},
+    revalidate: 10,
+  }
+}
+
+type PostStaticProps = {
+  params: {
+    slug: PostInterface['slug']
+  }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // let posts = await fetch("https://jsonplaceholder.typicode.com/posts");
+  // posts = await posts.json();
+  const paths: PostStaticProps[] = []
+  posts.forEach((item) => {
+    paths.push({
+      params: {
+        slug: item.slug,
+      },
+    })
+  })
+
+  return {
+    paths,
+    fallback: true,
   }
 }
 

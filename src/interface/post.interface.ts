@@ -1,5 +1,5 @@
 export type PostInterface = {
-  id: number
+  id: string
   slug: string
   title: string
   publishedAt: string
