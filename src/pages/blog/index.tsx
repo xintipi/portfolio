@@ -1,5 +1,3 @@
-import { GetStaticPaths } from 'next'
-
 import PageTitle from '@/components/shared/PageTitle'
 import Pagination from '@/components/shared/Pagination'
 import Post from '@/components/shared/Post'

@@ -14,6 +14,11 @@ import Layout from '@/layouts/Layout'
 type Props = {
   post: PostInterface
 }
+type PostStaticProps = {
+  params: {
+    slug: string
+  }
+}
 
 const BlogSingle: FC<Props> = ({ post }) => {
   return (
@@ -125,12 +130,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 }
 
-type PostStaticProps = {
-  params: {
-    slug: PostInterface['slug']
-  }
-}
-
 export const getStaticPaths: GetStaticPaths = async () => {
   // let posts = await fetch("https://jsonplaceholder.typicode.com/posts");
   // posts = await posts.json();
@@ -145,7 +144,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }
 
