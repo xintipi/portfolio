@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArticleJsonLd } from 'next-seo'
+import { ArticleJsonLd, BreadcrumbJsonLd } from 'next-seo'
 import React, { FC, Fragment } from 'react'
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 
@@ -14,6 +14,7 @@ import Layout from '@/layouts/Layout'
 type Props = {
   post: PostInterface
 }
+
 type PostStaticProps = {
   params: {
     slug: string
@@ -32,6 +33,21 @@ const BlogSingle: FC<Props> = ({ post }) => {
         authorName={post.authorName}
         description={post.description}
         isAccessibleForFree={true}
+      />
+
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'Home',
+            item: `${process.env.NEXT_PUBLIC_DOMAIN}/home`,
+          },
+          {
+            position: 1,
+            name: 'Blog',
+            item: `${process.env.NEXT_PUBLIC_DOMAIN}/blog`,
+          },
+        ]}
       />
 
       <Layout

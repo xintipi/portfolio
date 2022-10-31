@@ -1,14 +1,16 @@
-import { GetServerSideProps } from 'next'
+import clsx from 'clsx'
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import absoluteUrl from 'next-absolute-url'
-import { ArticleJsonLd } from 'next-seo'
+import { ArticleJsonLd, BreadcrumbJsonLd } from 'next-seo'
 import React, { FC } from 'react'
 import Slider, { Settings } from 'react-slick'
 
+import { posts } from '@/data/posts'
 import { works } from '@/data/works'
 import { WorkInterface } from '@/interface/work.interface'
 import Layout from '@/layouts/Layout'
+import styles from '@/styles/modules/Button.module.scss'
 
 const settings: Settings = {
   dots: false,
@@ -26,10 +28,15 @@ type Props = {
     publishedAt: string
     previewUrl: string
   }
-  host: string
 }
 
-const WorkDetail: FC<Props> = ({ work, host }) => {
+type WorksStaticProps = {
+  params: {
+    slug: string
+  }
+}
+
+const WorkDetail: FC<Props> = ({ work }) => {
   return (
     <>
       <ArticleJsonLd
@@ -43,6 +50,21 @@ const WorkDetail: FC<Props> = ({ work, host }) => {
         authorName={''}
       />
 
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'Home',
+            item: `${process.env.NEXT_PUBLIC_DOMAIN}/home`,
+          },
+          {
+            position: 2,
+            name: 'Works',
+            item: `${process.env.NEXT_PUBLIC_DOMAIN}/works`,
+          },
+        ]}
+      />
+
       <Layout
         title={work.title}
         canonical={`${process.env.NEXT_PUBLIC_DOMAIN}/works/${work.slug}`}
@@ -50,7 +72,7 @@ const WorkDetail: FC<Props> = ({ work, host }) => {
         openGraph={{
           description: work.description,
           title: `${work.title} - ${process.env.NEXT_PUBLIC_APP_NAME}`,
-          url: `${host}/works/${work.slug}`,
+          url: `${process.env.NEXT_PUBLIC_APP_NAME}/works/${work.slug}`,
           type: 'article',
           article: {
             publishedTime: work.publishedAt,
@@ -58,7 +80,7 @@ const WorkDetail: FC<Props> = ({ work, host }) => {
           },
           images: [
             {
-              url: `${host}${work.thumbnailUrl}`,
+              url: `${process.env.NEXT_PUBLIC_APP_NAME}${work.thumbnailUrl}`,
               width: 1280,
               height: 720,
             },
@@ -85,7 +107,7 @@ const WorkDetail: FC<Props> = ({ work, host }) => {
             </Slider>
             <div className="mt-6 flex justify-center">
               <Link href={work.previewUrl} legacyBehavior>
-                <a className="btn">Live Preview</a>
+                <a className={clsx(styles.btn)}>Live Preview</a>
               </Link>
             </div>
           </div>
@@ -129,20 +151,42 @@ const WorkDetail: FC<Props> = ({ work, host }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { origin } = absoluteUrl(context.req)
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
   const slug = context.params?.slug as string
+  // let work = await fetch(`https://jsonplaceholder.typicode.com/posts?slug=${slug}`)
   const work = works.find((work) => work.slug === slug)
   if (work) {
     return {
       props: {
         work,
-        host: origin,
       },
+      revalidate: 10,
     }
   }
+
   return {
     notFound: true,
+    props: {},
+    revalidate: 10,
   }
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // let posts = await fetch("https://jsonplaceholder.typicode.com/posts");
+  // posts = await posts.json();
+  const paths: WorksStaticProps[] = []
+  posts.forEach((item) => {
+    paths.push({
+      params: {
+        slug: item.slug,
+      },
+    })
+  })
+
+  return {
+    paths,
+    fallback: 'blocking',
+  }
+}
+
 export default WorkDetail

@@ -1,5 +1,4 @@
 @import 'tailwindcss/base';
-
 @layer base {
   @import 'partials/base/variables';
   @import 'partials/base/globals';
@@ -7,13 +6,15 @@
 }
 
 @import 'tailwindcss/components';
-
 @layer components {
   @import 'partials/components/scroll-top';
   @import 'partials/components/header';
 }
 
 @import 'tailwindcss/utilities';
+@layer components {
+  @import 'partials/utils/vendor';
+}
 
 .hero {
   @apply h-screen;
