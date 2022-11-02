@@ -33,7 +33,7 @@ const Header = () => {
 
         <ul className="ml-auto hidden items-center md:flex">
           <li>
-            <Link href="/works" legacyBehavior>
+            <Link href="/works" legacyBehavior prefetch={false}>
               <a
                 className={clsx(
                   'inline-block px-4 font-semibold  transition-colors duration-300 hover:text-primary-600 hover:underline',
@@ -46,7 +46,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/blog" legacyBehavior>
+            <Link href="/blog" legacyBehavior prefetch={false}>
               <a
                 className={clsx(
                   'inline-block px-4 font-semibold  transition-colors duration-300 hover:text-primary-600 hover:underline',
@@ -59,7 +59,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/contact" legacyBehavior>
+            <Link href="/contact" legacyBehavior prefetch={false}>
               <a
                 className={clsx(
                   'inline-block px-4 font-semibold  transition-colors duration-300 hover:text-primary-600 hover:underline',
