@@ -28,7 +28,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
         <div className="grid grid-cols-2 gap-x-6 gap-y-4">
           <div>
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">HTML5 / CSS3</h6>
+              <p className="font-semibold">HTML5 / CSS3</p>
               <p>60%</p>
             </div>
             <ProgressBar color="yellow" progress={60} />
@@ -36,7 +36,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
 
           <div>
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">VueJS</h6>
+              <p className="font-semibold">VueJS</p>
               <p>60%</p>
             </div>
             <ProgressBar color="green" progress={60} />
@@ -44,7 +44,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
 
           <div>
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">NuxtJS</h6>
+              <p className="font-semibold">NuxtJS</p>
               <p>60%</p>
             </div>
             <ProgressBar color="emerald" progress={60} />
@@ -52,7 +52,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
 
           <div>
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">ReactJS</h6>
+              <p className="font-semibold">ReactJS</p>
               <p>60%</p>
             </div>
             <ProgressBar color="blue" progress={60} />
@@ -60,7 +60,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
 
           <div>
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">NextJS</h6>
+              <p className="font-semibold">NextJS</p>
               <p>60%</p>
             </div>
             <ProgressBar color="sky" progress={60} />
@@ -68,7 +68,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
 
           <div>
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">TypeScript</h6>
+              <p className="font-semibold">TypeScript</p>
               <p>60%</p>
             </div>
             <ProgressBar color="fuchsia" progress={60} />
@@ -76,7 +76,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
 
           <div>
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">Gulp / Webpack / Vite</h6>
+              <p className="font-semibold">Gulp / Webpack / Vite</p>
               <p>60%</p>
             </div>
             <ProgressBar color="purple" progress={60} />
@@ -84,7 +84,7 @@ const AboutSection: FC<{ about: string }> = ({ about }) => {
 
           <div>
             <div className="mb-3 flex justify-between">
-              <h6 className="font-semibold">Git / Gitflow</h6>
+              <p className="font-semibold">Git / Gitflow</p>
               <p>60%</p>
             </div>
             <ProgressBar color="primary" progress={60} />
