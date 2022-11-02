@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         sans: ['Rubik', 'sans-sarif'],
       },
+      backgroundColor: {
+        red: 'var(--color-red)',
+      },
       colors: {
         primary: {
           50: '#ffedef',

@@ -6,7 +6,6 @@ import { ArticleJsonLd, BreadcrumbJsonLd } from 'next-seo'
 import React, { FC } from 'react'
 import Slider, { Settings } from 'react-slick'
 
-import { posts } from '@/data/posts'
 import { works } from '@/data/works'
 import { WorkInterface } from '@/interface/work.interface'
 import Layout from '@/layouts/Layout'
@@ -153,7 +152,7 @@ const WorkDetail: FC<Props> = ({ work }) => {
 
 export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
   const slug = context.params?.slug as string
-  // let work = await fetch(`https://jsonplaceholder.typicode.com/posts?slug=${slug}`)
+  // let work = await fetch(`https://jsonplaceholder.typicode.com/works?slug=${slug}`)
   const work = works.find((work) => work.slug === slug)
   if (work) {
     return {
@@ -172,10 +171,10 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // let posts = await fetch("https://jsonplaceholder.typicode.com/posts");
-  // posts = await posts.json();
+  // let works = await fetch("https://jsonplaceholder.typicode.com/works");
+  // works = await works.json();
   const paths: WorksStaticProps[] = []
-  posts.forEach((item) => {
+  works.forEach((item) => {
     paths.push({
       params: {
         slug: item.slug,

@@ -292,7 +292,7 @@ export const works: WorkInterface[] = [
   {
     id: 5,
     title: 'POS System & Inventory Management',
-    slug: 'pos-system-&-inventory-management',
+    slug: 'pos-system-inventory-management',
     category: 'Web Development',
     thumbnailUrl: '/images/works/point-of-sale.png',
     description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
@@ -508,7 +508,7 @@ export const works: WorkInterface[] = [
   {
     id: 8,
     title: 'Digital Marketing App & Website',
-    slug: 'digital-marketing-app-&-website',
+    slug: 'digital-marketing-app-website',
     category: 'Mobile App',
     thumbnailUrl: '/images/works/digital-marketing-app.png',
     description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
@@ -580,7 +580,7 @@ export const works: WorkInterface[] = [
   {
     id: 9,
     title: 'Food Delivery System & Ecommerce',
-    slug: 'food-delivery-system-&-ecommerce',
+    slug: 'food-delivery-system-ecommerce',
     category: 'Mobile App',
     thumbnailUrl: '/images/works/food-delivery-app.png',
     description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
@@ -796,7 +796,7 @@ export const works: WorkInterface[] = [
   {
     id: 12,
     title: 'ERP System & Inventory Management',
-    slug: 'epr-system-&-inventory-management',
+    slug: 'epr-system-inventory-management',
     category: 'Web Development',
     thumbnailUrl: '/images/works/erp-system.png',
     description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
