@@ -22,7 +22,7 @@ const PageTitle: FC<Props> = ({ children, breadcrumb = [] }) => {
             <div key={index}>
               {item.path && (
                 <Link href={item.path} legacyBehavior>
-                  <a className="">{item.label}</a>
+                  <a>{item.label}</a>
                 </Link>
               )}
 

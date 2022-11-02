@@ -21,10 +21,12 @@ const Portfolio = ({ imageUrl, category, title, href }: Props) => {
       <div className={styles['portfolio-overlay']}>
         <span className={styles['portfolio-category']}>{category}</span>
         <Link href={href} legacyBehavior>
-          <a className={styles['portfolio-title']}>{title}</a>
+          <a className={styles['portfolio-title']} aria-label="title">
+            {title}
+          </a>
         </Link>
         <Link href={href} legacyBehavior>
-          <a className={styles['portfolio-link']}>
+          <a className={styles['portfolio-link']} aria-label="icon">
             <LinkIcon className="h-5 text-white" />
           </a>
         </Link>
