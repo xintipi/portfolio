@@ -1,10 +1,19 @@
+import { DocumentContext } from 'next/document'
+
 import PageTitle from '@/components/shared/PageTitle'
 import Pagination from '@/components/shared/Pagination'
 import Post from '@/components/shared/Post'
 import { posts } from '@/data/posts'
 import Layout from '@/layouts/Layout'
+import { pageCount, PER_PAGE } from '@/utils'
 
-const Blog = () => {
+type Props = {
+  page: string | number
+  perPage: string | number
+  totalCount: string | number
+}
+
+const Blog = (props: Props) => {
   return (
     <Layout
       title="Blog"
@@ -29,11 +38,22 @@ const Blog = () => {
           ))}
         </div>
         <div className="mt-12">
-          <Pagination />
+          <Pagination totalCount={props.totalCount} page={props.page} perPage={props.perPage} />
         </div>
       </div>
     </Layout>
   )
+}
+
+Blog.getInitialProps = async ({ query }: DocumentContext) => {
+  const page = query.page || 1
+  const totalCount = pageCount(posts.length)
+
+  return {
+    page,
+    perPage: PER_PAGE,
+    totalCount,
+  }
 }
 
 export default Blog

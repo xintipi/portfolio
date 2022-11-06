@@ -38,7 +38,7 @@ const Header = () => {
                 className={clsx(
                   'inline-block px-4 font-semibold  transition-colors duration-300 hover:text-primary-600 hover:underline',
                   {
-                    'text-primary-500': router.asPath == '/works',
+                    'text-primary-500': router.asPath.includes('/works'),
                   }
                 )}>
                 Works
@@ -51,7 +51,7 @@ const Header = () => {
                 className={clsx(
                   'inline-block px-4 font-semibold  transition-colors duration-300 hover:text-primary-600 hover:underline',
                   {
-                    'text-primary-500': router.asPath == '/blog',
+                    'text-primary-500': router.asPath.includes('/blog'),
                   }
                 )}>
                 Blog
@@ -64,7 +64,7 @@ const Header = () => {
                 className={clsx(
                   'inline-block px-4 font-semibold  transition-colors duration-300 hover:text-primary-600 hover:underline',
                   {
-                    'text-primary-500': router.asPath == '/contact',
+                    'text-primary-500': router.asPath.includes('/contact'),
                   }
                 )}>
                 Contact

@@ -1,8 +1,8 @@
 @import 'tailwindcss/base';
 @layer base {
+  @import 'partials/base/fonts';
   @import 'partials/base/variables';
   @import 'partials/base/globals';
-  @import 'partials/base/fonts';
 }
 
 @import 'tailwindcss/components';

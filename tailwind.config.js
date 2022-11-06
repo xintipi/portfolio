@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -21,7 +22,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Rubik', 'sans-sarif'],
+        sans: ['Noto Sans Japanese', 'sans-sarif'],
       },
       backgroundColor: {
         red: 'var(--color-red)',
