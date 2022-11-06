@@ -25,10 +25,13 @@ const Pagination = ({ totalCount, page, perPage }: Props) => {
   const pageNumClick = (_page: typeCommon) => {
     if (_page > 0 && _page <= pageIntoArray.length) {
       router
-        .push({
-          pathname: router.pathname,
-          query: { page: _page, perPage },
-        })
+        .push(
+          {
+            pathname: router.pathname,
+            query: { page: _page, perPage },
+          },
+          router.pathname
+        )
         .then((r) => r)
     }
   }
