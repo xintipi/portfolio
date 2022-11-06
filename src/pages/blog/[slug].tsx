@@ -40,7 +40,7 @@ const BlogSingle: FC<Props> = ({ post }) => {
           {
             position: 1,
             name: 'Home',
-            item: `${process.env.NEXT_PUBLIC_DOMAIN}/home`,
+            item: `${process.env.NEXT_PUBLIC_DOMAIN}`,
           },
           {
             position: 1,
@@ -160,7 +160,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: false,
   }
 }
 

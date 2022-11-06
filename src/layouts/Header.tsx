@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header className="header text-gray-700 dark:text-gray-200">
       <div className="mx-auto flex h-16 max-w-7xl items-center px-4 md:px-6">
-        <Link href="/home" legacyBehavior>
+        <Link href="/" legacyBehavior>
           <a className="text-3xl  font-bold">
             <span>Xintipi</span>
             <span className="text-primary-500">.</span>
