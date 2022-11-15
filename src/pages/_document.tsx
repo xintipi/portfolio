@@ -2,14 +2,12 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
   DocumentProps,
+  Head,
   Html,
   Main,
   NextScript,
 } from 'next/document'
 import React from 'react'
-
-import DocumentHead from '@/components/shared/DocumentHead'
-import { GA_TRACKING_ID } from '@/lib/analytics'
 
 type Props = DocumentInitialProps & {
   lang: string
@@ -42,24 +40,10 @@ class MyDocument extends Document<DocumentProps | unknown> {
     const { lang } = this.props
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
-        <DocumentHead>
+        <Head>
           <link rel="shortcut icon" href="https://i.ibb.co/58BpJgP/favicon-16.png" />
           <link rel="apple-touch-icon" href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png" />
-
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_TRACKING_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-            }}
-          />
-        </DocumentHead>
+        </Head>
         <body>
           <Main />
           <NextScript />
