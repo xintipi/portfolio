@@ -47,6 +47,8 @@ const Blog = (props: Props) => {
 
 Blog.getInitialProps = async ({ query }: DocumentContext) => {
   const page = query.page || 1
+  // let posts = await fetch(`https://jsonplaceholder.typicode.com/posts?page=${page}`);
+  // posts = await posts.json();
   const totalCount = pageCount(posts.length)
 
   return {
