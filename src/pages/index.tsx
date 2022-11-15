@@ -11,12 +11,12 @@ import Layout from '@/layouts/Layout'
 import { getAboutMe } from '@/utils/about-me'
 import { readData } from '@/utils/read-data'
 
-type Props = {
+export type SocialProps = {
   socials: SocialInterface[]
   about: AboutMeInterface[]
 }
 
-const Home: FC<Props> = ({ socials, about }) => {
+const Home: FC<SocialProps> = ({ socials, about }) => {
   const openGraph = useMemo(() => {
     return {
       title: 'XIN - Developer',
@@ -60,11 +60,11 @@ const Home: FC<Props> = ({ socials, about }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { socials } = await readData<Props>('src/data/socials.json')
+export const getStaticProps: GetStaticProps<SocialProps> = async () => {
+  const { socials } = await readData<SocialProps>('src/data/socials.json')
   const about = await getAboutMe()
 
-  const props: Props = {
+  const props: SocialProps = {
     socials,
     about,
   }

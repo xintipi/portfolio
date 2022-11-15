@@ -9,7 +9,6 @@ import React, { useEffect } from 'react'
 import { Provider } from 'react-redux'
 
 import { ThemeProvider } from '@/hooks/useTheme'
-// import * as ga from '@/lib/analytics'
 import { Store, store } from '@/store'
 
 function MyApp({ Component, pageProps }: AppProps) {

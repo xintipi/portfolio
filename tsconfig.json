@@ -20,7 +20,8 @@
     "noEmit": true,
     "jsx": "preserve",
     "types": [
-      "node"
+      "node",
+      "jest"
     ],
     "paths": {
       "@/*": [
@@ -31,7 +32,8 @@
   },
   "include": [
     "src",
-    "./node_modules/redux-persist/types"
+    "./node_modules/redux-persist/types",
+    "./node_modules/@types/jest/index.d.ts",
   ],
   "exclude": [
     "node_modules"
