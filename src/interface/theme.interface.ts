@@ -4,7 +4,7 @@ import { ThemeEnum as Theme } from '@/enums/theme.enum'
 
 export type ThemeContextType = {
   theme: Theme
-  toggleTheme: () => void
+  toggleTheme: (payload: string) => void
 }
 
 export type ThemeProviderProps = {

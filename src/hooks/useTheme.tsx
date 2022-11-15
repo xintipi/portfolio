@@ -52,10 +52,9 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
 
 const useTheme = () => {
   const context = useContext(ThemeContext)
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider')
+  if (context) {
+    return context
   }
-  return context
 }
 
 export { ThemeProvider, useTheme }

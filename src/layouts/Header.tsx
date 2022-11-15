@@ -77,7 +77,7 @@ const Header = () => {
           aria-label="toggle theme"
           type="button"
           className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3"
-          onClick={() => toggleTheme()}>
+          onClick={() => toggleTheme(ThemeEnum.DARK)}>
           {theme === Theme.LIGHT ? <BsMoonStars size={20} /> : <BsSun size={20} />}
         </button>
 
