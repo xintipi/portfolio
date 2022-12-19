@@ -16,7 +16,7 @@ export type SocialProps = {
   about: AboutMeInterface[]
 }
 
-const Home: FC<SocialProps> = ({ socials, about }) => {
+const Index: FC<SocialProps> = ({ socials, about }) => {
   const openGraph = useMemo(() => {
     return {
       title: 'XIN - Developer',
@@ -74,4 +74,4 @@ export const getStaticProps: GetStaticProps<SocialProps> = async () => {
   }
 }
 
-export default Home
+export default Index

@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   // important: true,
-  purge: [
+  content: [
     './src/pages/**/*.tsx',
     './src/pages/**/*.js',
     './src/pages/**/*.ts',
