@@ -14,6 +14,11 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  env: {
+    NEXT_PUBLIC_APP_NAME: 'XINTIPI.XYZ',
+    NEXT_PUBLIC_GA_TRACKING_ID: 'G-E262R9BKQX',
+    NEXT_PUBLIC_OTHER_DOMAIN: 'https://rainymood.xyz/',
+  },
 }
 
 module.exports = withBundleAnalyzer({
