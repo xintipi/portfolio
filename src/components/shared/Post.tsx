@@ -10,14 +10,22 @@ type Props = {
   title: string
   publishedAt: string
   href: string
+  placeholders: string
 }
 
-const Post = ({ thumbnailUrl, title, publishedAt, href }: Props) => {
+const Post = ({ thumbnailUrl, title, publishedAt, href, placeholders }: Props) => {
   return (
     <div className={clsx(styles['post'], 'bg-white dark:bg-gray-700')}>
       <Link href={href} legacyBehavior>
         <a className={styles['post-image']}>
-          <Image src={thumbnailUrl} height={384} width={512} alt={title} />
+          <Image
+            src={thumbnailUrl}
+            height={384}
+            width={512}
+            alt={title}
+            blurDataURL={placeholders}
+            placeholder="blur"
+          />
         </a>
       </Link>
       <div className="p-6">
