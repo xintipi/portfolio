@@ -1,6 +1,4 @@
-import { GetServerSideProps } from 'next'
 import { DocumentContext } from 'next/document'
-import { getPlaiceholder } from 'plaiceholder'
 
 import PageTitle from '@/components/shared/PageTitle'
 import Pagination from '@/components/shared/Pagination'
@@ -12,7 +10,6 @@ import { pageCount, PER_PAGE } from '@/utils'
 
 type Props = {
   data: PostInterface[]
-  placeholders: string[]
   page: string | number
   perPage: string | number
   totalCount: string | number
@@ -39,7 +36,6 @@ const Blog = (props: Props) => {
               thumbnailUrl={post.thumbnailUrl}
               title={post.title}
               publishedAt={post.publishedAt}
-              placeholders={props.placeholders[index]}
             />
           ))}
         </div>
@@ -51,29 +47,27 @@ const Blog = (props: Props) => {
   )
 }
 
-export const getServerSideProps = async (context: DocumentContext) => {
+Blog.getInitialProps = async (context: DocumentContext) => {
   const page = context.query.page || 1
   const data = posts
 
   // let posts = await fetch(`https://jsonplaceholder.typicode.com/posts?page=${page}`);
   // posts = await posts.json();
 
-  const placeholders = await Promise.all(
-    data.map(async (url) => {
-      const { base64 } = await getPlaiceholder(url.thumbnailUrl)
-      return base64
-    })
-  )
+  // const placeholders = await Promise.all(
+  //   data.map(async (url) => {
+  //     const { base64 } = await getPlaiceholder(url.thumbnailUrl)
+  //     return base64
+  //   })
+  // )
 
   const totalCount = pageCount(data.length)
   return {
-    props: {
-      data,
-      placeholders,
-      page,
-      perPage: PER_PAGE,
-      totalCount,
-    },
+    data,
+    // placeholders,
+    page,
+    perPage: PER_PAGE,
+    totalCount,
   }
 }
 
