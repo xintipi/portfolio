@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next'
-import React, { FC, Fragment, useMemo } from 'react'
+import React, { FC, useMemo } from 'react'
 
 import AboutSection from '@/components/partials/AboutSection'
 import ExperienceSection from '@/components/partials/ExperienceSection'
@@ -19,7 +19,7 @@ export type SocialProps = {
 const Index: FC<SocialProps> = ({ socials, about }) => {
   const openGraph = useMemo(() => {
     return {
-      title: 'XIN - Developer',
+      title: 'XIN Developer',
       description: 'Frontend Developer, UI Designer, and Open Source Advocate.',
       url: process.env.NEXT_PUBLIC_DOMAIN,
       type: 'profile',
@@ -40,9 +40,9 @@ const Index: FC<SocialProps> = ({ socials, about }) => {
   }, [])
 
   return (
-    <Fragment>
+    <>
       <Layout
-        title="XIN - Developer"
+        title="XIN Developer"
         description="Frontend Developer, UI Designer, and Open Source Advocate."
         openGraph={openGraph}>
         <HeroSection socials={socials} />
@@ -56,7 +56,7 @@ const Index: FC<SocialProps> = ({ socials, about }) => {
           <RecentWorkSection />
         </section>
       </Layout>
-    </Fragment>
+    </>
   )
 }
 

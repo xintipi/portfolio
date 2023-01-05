@@ -33,7 +33,6 @@
     "next": "^13.1.0",
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.43",
-    "nextjs-google-analytics": "^2.2.2",
     "nextjs-progressbar": "^0.0.16",
     "plaiceholder": "^2.5.0",
     "react": "^18.2.0",

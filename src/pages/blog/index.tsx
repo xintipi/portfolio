@@ -17,33 +17,35 @@ type Props = {
 
 const Blog = (props: Props) => {
   return (
-    <Layout
-      title="Blog"
-      description="Blog - News, pictures, LATEST BLOG or programming articles, update personal stories at Xintipi.xyz">
-      <PageTitle
-        breadcrumb={[
-          { label: 'Home', path: '/' },
-          { label: 'Blog', path: '' },
-        ]}>
-        Blog
-      </PageTitle>
-      <div className="container py-10">
-        <div className="grid gap-8 sm:gap-4 md:grid-cols-3 lg:gap-8">
-          {props.data.map((post, index) => (
-            <Post
-              key={post.id}
-              href={`/blog/${post.slug}`}
-              thumbnailUrl={post.thumbnailUrl}
-              title={post.title}
-              publishedAt={post.publishedAt}
-            />
-          ))}
+    <>
+      <Layout
+        title="Blog"
+        description="Blog - News, pictures, LATEST BLOG or programming articles, update personal stories at Xintipi.xyz">
+        <PageTitle
+          breadcrumb={[
+            { label: 'Home', path: '/' },
+            { label: 'Blog', path: '' },
+          ]}>
+          Blog
+        </PageTitle>
+        <div className="container py-10">
+          <div className="grid gap-8 sm:gap-4 md:grid-cols-3 lg:gap-8">
+            {props.data.map((post, index) => (
+              <Post
+                key={post.id}
+                href={`/blog/${post.slug}`}
+                thumbnailUrl={post.thumbnailUrl}
+                title={post.title}
+                publishedAt={post.publishedAt}
+              />
+            ))}
+          </div>
+          <div className="mt-12">
+            <Pagination totalCount={props.totalCount} page={props.page} perPage={props.perPage} />
+          </div>
         </div>
-        <div className="mt-12">
-          <Pagination totalCount={props.totalCount} page={props.page} perPage={props.perPage} />
-        </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 

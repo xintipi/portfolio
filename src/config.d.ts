@@ -9,4 +9,10 @@ declare module 'react-tippy' {
   }
 }
 
+declare global {
+  interface Window {
+    gtag: any
+  }
+}
+
 declare module 'gtag.js'

@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArticleJsonLd, BreadcrumbJsonLd } from 'next-seo'
-import React, { FC, Fragment } from 'react'
+import React, { FC } from 'react'
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 
 import CommentBox from '@/components/partials/CommentBox'
@@ -23,7 +23,7 @@ type PostStaticProps = {
 
 const BlogSingle: FC<Props> = ({ post }) => {
   return (
-    <Fragment>
+    <>
       <ArticleJsonLd
         key={`blogJSON-${post.slug}`}
         url={`${process.env.NEXT_PUBLIC_DOMAIN}/blog/${post.slug}`}
@@ -122,7 +122,7 @@ const BlogSingle: FC<Props> = ({ post }) => {
           </div>
         </div>
       </Layout>
-    </Fragment>
+    </>
   )
 }
 
