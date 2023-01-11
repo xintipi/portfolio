@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { CorporateContactJsonLd } from 'next-seo'
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 
 import Button from '@/components/form/Button'
 import Input from '@/components/form/Input'
@@ -9,6 +9,10 @@ import PageTitle from '@/components/shared/PageTitle'
 import Layout from '@/layouts/Layout'
 
 const Contact = () => {
+  const onChange = (evt: ChangeEvent<HTMLInputElement>) => {
+    console.log(evt.target.value)
+  }
+
   return (
     <>
       <CorporateContactJsonLd
@@ -50,7 +54,7 @@ const Contact = () => {
             </div>
             <div className="col-span-2">
               <div className="grid gap-8 md:grid-cols-2">
-                <Input placeholder="Your Name" />
+                <Input placeholder="Your Name" onChange={(e) => onChange(e)} />
                 <Input placeholder="Email Address" />
               </div>
 
