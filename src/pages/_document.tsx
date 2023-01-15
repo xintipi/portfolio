@@ -41,6 +41,10 @@ class MyDocument extends Document<DocumentProps | unknown> {
     return (
       <Html dir={lang === 'en' ? 'ltr' : 'rtl'}>
         <Head>
+          <meta
+            name="google-site-verification"
+            content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
+          />
           <link rel="shortcut icon" href="https://i.ibb.co/58BpJgP/favicon-16.png" />
           <link rel="apple-touch-icon" href="https://i.ibb.co/25ZVR47/apple-touch-icon-180.png" />
         </Head>
