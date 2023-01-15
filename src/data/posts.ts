@@ -217,7 +217,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: '7',
-    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat-1',
     title: 'Eius et ipsum occaecati dicta aut quaerat',
     publishedAt: '21 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-1.png',
@@ -253,7 +253,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: '8',
-    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat-2',
     title: 'Dolorum ut in voluptas mollitia et saepe quo animi',
     publishedAt: '20 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-2.png',
@@ -289,7 +289,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: '9',
-    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat-3',
     title: 'Fugit voluptas sed molestias voluptatem provident',
     publishedAt: '11 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-3.png',
@@ -325,7 +325,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: '10',
-    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat-4',
     title: 'Adipisci placeat illum aut reiciendis qui',
     publishedAt: '10 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-4.png',
@@ -361,7 +361,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: '11',
-    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat-5',
     title: 'Iusto eius quod necessitatibus culpa ea',
     publishedAt: '9 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-5.png',
@@ -397,7 +397,7 @@ export const posts: PostInterface[] = [
   },
   {
     id: '12',
-    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat',
+    slug: 'Eius-et-ipsum-occaecati-dicta-aut-quaerat-6',
     title: 'Neque voluptates ratione',
     publishedAt: '8 Dec 2021',
     thumbnailUrl: '/images/posts/post-thumbnail-6.png',

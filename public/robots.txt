@@ -7,4 +7,3 @@ Host: https://xintipi.xyz
 
 # Sitemaps
 Sitemap: https://xintipi.xyz/sitemap.xml
-Sitemap: https://xintipi.xyz/server-sitemap.xml
