@@ -4,7 +4,7 @@ import Portfolio from '@/components/shared/Portfolio'
 import { works } from '@/data/works'
 import Layout from '@/layouts/Layout'
 
-const Work = () => {
+const work = () => {
   return (
     <>
       <Layout title="Works" description="Works - News and Projects at Xintipi.xyz">
@@ -39,4 +39,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default work

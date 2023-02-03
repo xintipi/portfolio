@@ -31,7 +31,7 @@ const HeroSection = ({ socials }: Props) => {
         <h1 className="mt-4 text-3xl font-bold ">Nguyen Huu Trung</h1>
         <div className="mt-2 flex gap-1">
           {' '}
-          I'm a <Typed strings={['Frontend Developer']} typeSpeed={55} backSpeed={45} loop />
+          I'm a <Typed strings={['Frontend Developer']} typeSpeed={60} backSpeed={30} loop />
         </div>
         <div className="mt-4 flex gap-5">
           {socials.map((social: SocialInterface) => (
@@ -39,7 +39,7 @@ const HeroSection = ({ socials }: Props) => {
               <a
                 href={social.href}
                 target="_blank"
-                className="cursor-pointer text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-primary-500"
+                className="text-gray-700 transition-colors duration-150 hover:text-primary-500"
                 aria-label={social.title}
                 rel="noreferrer">
                 {components[social.icon as keyof typeof components]}

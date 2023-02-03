@@ -4,6 +4,7 @@ import React, { FC, ReactNode } from 'react'
 import { FiArrowUp } from 'react-icons/fi'
 import ScrollToTop from 'react-scroll-to-top'
 
+import Footer from '@/components/partials/Footer'
 import Header from '@/layouts/Header'
 
 interface Props {
@@ -41,6 +42,8 @@ const Layout: FC<Props> = ({ children, title, description, canonical, openGraph 
         />
 
         <div className="mt-16">{children}</div>
+
+        <Footer />
       </div>
     </>
   )
