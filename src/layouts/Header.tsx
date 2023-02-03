@@ -126,7 +126,7 @@ const Header = () => {
                     type="button"
                     className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     onClick={() => handleSideBar(false)}>
-                    <span className="text-white">&#10006;</span>
+                    <span className="text-[color:white]">&#10006;</span>
                   </button>
                 </div>
               </Transition.Child>
