@@ -3,5 +3,5 @@ export type ExperienceInterface = {
   company: string
   startDate: string
   endDate: string
-  description: string
+  description: string[]
 }

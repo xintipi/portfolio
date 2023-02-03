@@ -2,24 +2,10 @@ import { EducationInterface } from '@/interface/education.interface'
 
 export const educations: EducationInterface[] = [
   {
-    degree: 'Bachelor of Science',
-    school: 'University of California',
-    startDate: 'Jan 2017',
+    degree: 'Engineer',
+    school: 'University of information technology',
+    startDate: 'Oct 2013',
     endDate: 'Dec 2018',
-    description: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
-  },
-  {
-    degree: 'Master of Science',
-    school: 'University of California',
-    startDate: 'Jan 2019',
-    endDate: 'Dec 2021',
-    description: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
-  },
-  {
-    degree: 'Doctor of Philosophy',
-    school: 'University of California',
-    startDate: 'Jan 2022',
-    endDate: 'Present',
-    description: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
+    description: ['Average score: 7.87/10'],
   },
 ]

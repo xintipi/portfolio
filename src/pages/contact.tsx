@@ -36,7 +36,7 @@ const Contact = () => {
         </PageTitle>
         <div className="container py-10">
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="relative mb-10 h-48">
+            <div className="relative mb-10 h-48 max-[640px]:mb-5">
               <Image
                 src="/images/map.svg"
                 className="dark:invert"
@@ -47,12 +47,12 @@ const Contact = () => {
               />
               <h6 className="text-2xl font-bold">Contact with me</h6>
               <p className="mt-2">I would love to hear from you. 👋</p>
-              <div className="mt-10 text-gray-400">
+              <div className="mb-10 text-gray-400 max-[640px]:mb-5">
                 <p className="mt-4">+84986607599</p>
                 <p>huutrung.mmt@gmail.com</p>
               </div>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 max-[640px]:mt-10">
               <div className="grid gap-8 md:grid-cols-2">
                 <Input placeholder="Your Name" onChange={(e) => onChange(e)} />
                 <Input placeholder="Email Address" />

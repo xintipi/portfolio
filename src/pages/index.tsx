@@ -30,7 +30,7 @@ const Index: FC<SocialProps> = ({ socials, about }) => {
       },
       images: [
         {
-          url: process.env.NEXT_PUBLIC_DOMAIN + '/images/avatar/me.webp',
+          url: process.env.NEXT_PUBLIC_DOMAIN + '/images/avatar/avatar-1.jpg',
           width: 1024,
           height: 1024,
           alt: 'Profile photo',

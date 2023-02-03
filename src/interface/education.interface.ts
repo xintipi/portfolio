@@ -3,5 +3,5 @@ export type EducationInterface = {
   degree: string
   startDate: string
   endDate: string
-  description: string
+  description: string[]
 }

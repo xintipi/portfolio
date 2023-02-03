@@ -20,14 +20,6 @@ const nextConfig = {
     NEXT_PUBLIC_OTHER_DOMAIN: 'https://rainymood.xyz/',
     NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: 'dSJT4Ih39PiDmWkaFm67yOKk5m5vM45MODdbCNCSbGg',
   },
-  async rewrites() {
-    return [
-      {
-        source: '/(.*)',
-        destination: '/404',
-      },
-    ]
-  },
 }
 
 module.exports = withBundleAnalyzer({

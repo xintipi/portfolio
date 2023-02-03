@@ -3,25 +3,27 @@ import { ExperienceInterface } from '@/interface/experience.interface'
 export const experiences: ExperienceInterface[] = [
   {
     jobTitle: 'Frontend Developer',
-    company: 'Google LLC',
-    startDate: 'Jan 2017',
-    endDate: 'Dec 2018',
-    description: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
-  },
-
-  {
-    jobTitle: 'Fullstack Developer',
-    company: 'Amazon Inc.',
-    startDate: 'Jan 2019',
-    endDate: 'Dec 2021',
-    description: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
-  },
-
-  {
-    jobTitle: 'Senior Fullstack Developer',
-    company: 'Facebook Inc.',
-    startDate: 'Jan 2022',
+    company: 'GUMI VIETNAM .,JSC',
+    startDate: 'Feb 2018',
     endDate: 'Present',
-    description: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
+    description: [
+      'Learned new technologies skills and applied to daily tasks to improve',
+      'Worked with Back-End Developer to design Mockup & APIs and Integrated as well as build a Content Management System (CMS) used Vue.js for FE',
+      'Propose plans to improve technology & performance for products',
+      'Maintained and upgrade features in existing products',
+      'Used Vue.js, React.js, JQuery framework (library) to contributed',
+    ],
+  },
+
+  {
+    jobTitle: 'Intership Wordpress Developer',
+    company: 'SOLAZU CO.,LTD',
+    startDate: 'Feb 2017',
+    endDate: 'May 2017',
+    description: [
+      'Approached and learn the actual working environment at the enterprise',
+      'Developed wordpress using CSS, HTML, PHP to enhance functionality and user',
+      'Create coding theme',
+    ],
   },
 ]
