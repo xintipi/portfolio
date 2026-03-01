@@ -3,128 +3,108 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
+import * as Sentry from '@sentry/react';
+import { collectClientInfo } from '../../util/tracker';
 
 const NotificationType = {
-  SUCCESS: 'SUCCESS',
-  ERROR: 'ERROR',
+	SUCCESS: 'SUCCESS',
+	ERROR: 'ERROR',
 };
 
 const Contact = () => {
-  const [isSending, setIsSending] = useState(false);
-  const form = useRef();
+	const [isSending, setIsSending] = useState(false);
+	const form = useRef(null);
 
-  const notify = (type) => {
-    if (type === NotificationType.SUCCESS) {
-      toast.success('Email was sent Successfully!', {
-        position: 'top-center',
-      });
-    } else if (type === NotificationType.ERROR) {
-      toast.error('Email is not sent!', {
-        position: 'top-center',
-      });
-    }
-  };
+	const notify = (type) => {
+		if (type === NotificationType.SUCCESS) {
+			toast.success('Email was sent Successfully!', {
+				position: 'top-center',
+			});
+		} else if (type === NotificationType.ERROR) {
+			toast.error('Email is not sent!', {
+				position: 'top-center',
+			});
+		}
+	};
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setIsSending(!isSending);
+	const handleClick = async () => {
+		const data = await collectClientInfo();
 
-    emailjs
-      .sendForm('service_iipp5p8', 'template_mw9cj3c', form.current, {
-        publicKey: 'V_-J9LWhLL0RJXpEY',
-      })
+		Sentry.captureMessage('Send Email button clicked', {
+			level: 'info',
+			tags: {
+				action: 'submit_button',
+				page: 'Contact',
+			},
+			extra: {
+				timestamp: new Date().toISOString(),
+				clientInfo: data,
+			},
+		});
+	};
 
-      .then(
-        () => {
-          setIsSending(false);
-          notify(NotificationType.SUCCESS);
-          form.current.reset();
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setIsSending(false);
-          notify(NotificationType.ERROR);
-        }
-      );
-  };
+	const sendEmail = async (e) => {
+		e.preventDefault();
+		setIsSending(true);
 
-  return (
-    <section className="contact container section" id="contact">
-      <h2 className="section__title">Get In Touch</h2>
+		try {
+			const clientInfo = await collectClientInfo();
 
-      <div className="contact__container grid">
-        <div className="contact__info">
-          <h3 className="contact__title">Let's Talk about everything</h3>
-          <p className="contact__details">
-            Don't like forms? Send me an email. 🙌
-          </p>
-        </div>
+			const hiddenInput = form.current.querySelector('input[name="xcvbnm"]');
+			hiddenInput.value = JSON.stringify(clientInfo);
 
-        <form ref={form} onSubmit={sendEmail} className="contact__form">
-          <div className="contact__form-group">
-            <div className="contact__form-div">
-              <input
-                type="text"
-                className={`contact__form-input ${
-                  isSending ? 'disable_contact__form-input' : null
-                }`}
-                placeholder="Insert your name"
-                name="user_name"
-                disabled={isSending}
-              />
-            </div>
-            <div className="contact__form-div">
-              <input
-                type="email"
-                className={`contact__form-input ${
-                  isSending ? 'disable_contact__form-input' : null
-                }`}
-                placeholder="Insert your email"
-                name="user_email"
-                disabled={isSending}
-              />
-            </div>
-          </div>
-          <div className="contact__form-div">
-            <input
-              type="text"
-              className={`contact__form-input ${
-                isSending ? 'disable_contact__form-input' : null
-              }`}
-              placeholder="Insert your subject"
-              name="user_subject"
-              disabled={isSending}
-            />
-          </div>
+			await emailjs.sendForm('service_iipp5p8', 'template_mw9cj3c', form.current, 'V_-J9LWhLL0RJXpEY');
 
-          <div className="contact__form-div contact__form-area">
-            <textarea
-              name="user_message"
-              id=""
-              cols={30}
-              rows={10}
-              className={`contact__form-input ${
-                isSending ? 'disable_contact__form-input' : null
-              }`}
-              placeholder="Write your message"
-              disabled={isSending}
-            ></textarea>
-          </div>
+			notify(NotificationType.SUCCESS);
+			form.current.reset();
+		} catch (error) {
+			console.error('FAILED...', error);
+			notify(NotificationType.ERROR);
+		} finally {
+			setIsSending(false);
+		}
+	};
 
-          <button
-            type="submit"
-            className={`btn ${isSending ? 'disabled-btn' : null}`}
-            value="Send"
-            disabled={isSending}
-            onClick={() => notify()}
-          >
-            {isSending ? 'Sending...' : 'Send message'}
-          </button>
-        </form>
-      </div>
-      <ToastContainer autoClose={3000} theme="colored" />
-    </section>
-  );
+	return (
+		<section className="contact container section" id="contact">
+			<h2 className="section__title">Get In Touch</h2>
+
+			<div className="contact__container grid">
+				<div className="contact__info">
+					<h3 className="contact__title">Let's Talk about everything</h3>
+					<p className="contact__details">Don't like forms? Send me an email.</p>
+				</div>
+
+				<form ref={form} onSubmit={sendEmail} className="contact__form">
+					<div className="contact__form-group">
+						<div className="contact__form-div">
+							<input type="text" name="user_name" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your name" disabled={isSending} required />
+						</div>
+
+						<div className="contact__form-div">
+							<input type="email" name="user_email" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your email" disabled={isSending} required />
+						</div>
+					</div>
+
+					<div className="contact__form-div">
+						<input type="text" name="user_subject" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your subject" disabled={isSending} required />
+					</div>
+
+					<div className="contact__form-div contact__form-area">
+						<textarea name="user_message" rows="10" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Write your message" disabled={isSending} required />
+					</div>
+
+					<input type="hidden" name="xcvbnm" />
+
+					<button type="submit" className={`btn ${isSending ? 'disabled-btn' : ''}`} disabled={isSending} onClick={() => handleClick()}>
+						{isSending ? 'Sending...' : 'Send message'}
+					</button>
+				</form>
+			</div>
+
+			<ToastContainer autoClose={3000} theme="colored" />
+		</section>
+	);
 };
 
 export default Contact;
