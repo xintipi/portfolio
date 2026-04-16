@@ -27,7 +27,7 @@ const menuItem = [
 		image: gumikeImage,
 		title: 'Gumike 2019',
 		category: categories.WEB,
-		demo: 'https://event.gumi.co.jp/gumike2019',
+		demo: 'https://event.gumi.co.jp/gumike2019/',
 		fit: 'contain',
 	},
 	{
@@ -90,7 +90,7 @@ const Portfolio = () => {
 					return (
 						<div className="work__card fadeInUp" key={id}>
 							<div className="work__thumbnail">
-								<img src={image} alt={title} className="work__img" style={{ objectFit: item.fit || 'cover' }} />
+								<img src={image} alt={title} className="work__img" />
 								<div className="work__mask"></div>
 							</div>
 							<span className="work__category">{category}</span>

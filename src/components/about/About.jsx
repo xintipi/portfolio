@@ -31,6 +31,8 @@ the browser, and optimizing UI rendering speed.</p>
 and AI integrations. Passionate about writing clean code, improving team workflows, and
 mentoring junior engineers to build high-quality products.</p>
 
+						<p className="about__description">Beyond coding, I'm passionate about brewing specialty coffee and designing custom mechanical keyboards. To me, whether it's dialing in the perfect espresso or crafting a seamless React UI, it all comes down to precision, balance, and a touch of art.</p>
+
 						<div className="about__expertise">
 							<h4 className="about__expertise-title">Expertise Areas</h4>
 							<div className="about__expertise-list">
