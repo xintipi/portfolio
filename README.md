@@ -1,6 +1,4 @@
-# 🚀 Fovero Portfolio
-
-![Portfolio Banner](https://raw.githubusercontent.com/foverokavindz/fovero-folio/main/public/metaImage.jpg)
+# 🚀 NGUYEN HUU TRUNG - Portfolio
 
 A modern, responsive portfolio website built with React and Vite, featuring a sleek UI with dark/light mode support, interactive components, and a contact form.
 
@@ -34,8 +32,8 @@ A modern, responsive portfolio website built with React and Vite, featuring a sl
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/fovero-folio.git
-   cd fovero-folio
+   git clone https://github.com/xintipi/portfolio.git
+   cd portfolio
    ```
 
 2. **Install dependencies**
@@ -79,7 +77,7 @@ The build artifacts will be stored in the `dist/` directory.
 ## 📱 Project Structure
 
 ```
-fovero-folio/
+portfolio/
 ├── public/               # Public assets
 ├── src/
 │   ├── assets/           # Images and static assets
@@ -111,25 +109,6 @@ You can customize this portfolio by:
 2. **Changing colors**: Edit the CSS variables in `src/index.css`
 3. **Adding new sections**: Create new components and add them to `App.jsx`
 4. **Updating images**: Replace images in the `src/assets` directory
-
-## 📷 Screenshots
-
-<details>
-<summary>Click to expand screenshots</summary>
-
-### Home Page (Light Theme)
-
-![Home Light](https://via.placeholder.com/800x400?text=Home+Light+Theme)
-
-### Portfolio Section (Dark Theme)
-
-![Portfolio Dark](https://via.placeholder.com/800x400?text=Portfolio+Dark+Theme)
-
-### Contact Form
-
-![Contact Form](https://via.placeholder.com/800x400?text=Contact+Form)
-
-</details>
 
 ## 👨‍💻 Author
 
