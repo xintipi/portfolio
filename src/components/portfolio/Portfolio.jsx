@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import './Portfolio.css';
-import lilac from '../../assets/lilac.png';
-import musicmuse from '../../assets/musicmuse.png';
-import posImage from '../../assets/pos.png';
-import galaxyImage from '../../assets/galaxy.png';
-import ragImage from '../../assets/rag.jpg';
-import talk from '../../assets/talk.png';
-import attireAvenue from '../../assets/attireAvenue.png';
+import rainyImage from '../../assets/rainy.png';
+import gumikeImage from '../../assets/gumike-2019.png';
+import gumike02Image from '../../assets/gumike-2019-02.png';
+import yadeaImage from '../../assets/yadea-g5.png';
 
 const categories = {
 	WEB: 'WEB',
@@ -18,56 +15,36 @@ const categories = {
 
 const menuItem = [
 	{
-		id: 7,
-		image: ragImage,
-		title: 'Knowledge graph + RAG System (Research AI Project)',
-		category: categories.RESEARCH,
-		link: 'https://github.com/orgs/NDK-Research-AI-Project/repositories',
-	},
-	{
 		id: 1,
-		image: posImage,
-		title: 'POS WARE - Point of Sale',
-		category: categories.DESKTOP,
-		link: 'https://github.com/foverokavindz/TeamElitePOS',
+		image: rainyImage,
+		title: 'Rainy Day',
+		category: categories.WEB,
+		link: 'https://github.com/xintipi/rainymood',
+		demo: 'https://rainymood.vercel.app/',
 	},
 	{
 		id: 2,
-		image: lilac,
-		title: 'Lilac E-Commerce Store',
+		image: gumikeImage,
+		title: 'Gumike 2019',
 		category: categories.WEB,
-		link: 'https://linktr.ee/foveromw',
+		demo: 'https://event.gumi.co.jp/gumike2019',
+		fit: 'contain',
 	},
 	{
 		id: 3,
-		image: musicmuse,
-		title: 'Music Muse - Emotion base music player',
+		image: gumike02Image,
+		title: 'Gumi Promotion',
 		category: categories.WEB,
-		link: 'https://github.com/Mu-me/Music-Muse',
+		demo: 'http://promotion.gumi.co.jp/',
+		fit: 'contain',
 	},
-	,
 	{
 		id: 4,
-		image: attireAvenue,
-		title: 'Attire Avenue',
+		image: yadeaImage,
+		title: 'Yadea G5',
 		category: categories.WEB,
-		link: 'https://github.com/Attire-Avenue-Online-Store',
-	},
-	,
-	{
-		id: 5,
-		image: talk,
-		title: '.Talk - Chat App',
-		category: categories.WEB,
-		link: 'https://github.com/foverokavindz/chat-app-1',
-	},
-	,
-	{
-		id: 6,
-		image: galaxyImage,
-		title: 'Virtual Galaxy Explorer',
-		category: categories.FIGMA,
-		link: 'https://www.figma.com/file/LdoZU1FAYTeyVKvDXhHboo/Virtual-Galaxy-Explorer-(Community)?type=design&node-id=0-1&mode=design&t=u9FRpvMw0LcYOf4K-0',
+		link: 'https://github.com/xintipi/yadea-g5',
+		demo: 'https://yadea-g5.vercel.app/',
 	},
 ];
 
@@ -113,14 +90,21 @@ const Portfolio = () => {
 					return (
 						<div className="work__card fadeInUp" key={id}>
 							<div className="work__thumbnail">
-								<img src={image} alt={title} className="work__img" />
+								<img src={image} alt={title} className="work__img" style={{ objectFit: item.fit || 'cover' }} />
 								<div className="work__mask"></div>
 							</div>
 							<span className="work__category">{category}</span>
 							<h3 className="work__title">{title}</h3>
-							<a href={item.link} className="work__button" target="_blank">
-								<i className="icon-link work__button-icon"></i>
-							</a>
+							{item.link && (
+								<a href={item.link} className="work__button" target="_blank" rel="noopener noreferrer" title="View source code">
+									<i className="icon-link work__button-icon"></i>
+								</a>
+							)}
+							{item.demo && (
+								<a href={item.demo} className="work__button work__button--demo" target="_blank" rel="noopener noreferrer" title="Visit live site">
+									<i className="icon-globe work__button-icon"></i>
+								</a>
+							)}
 						</div>
 					);
 				})}

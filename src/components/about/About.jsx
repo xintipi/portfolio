@@ -34,19 +34,24 @@ const About = () => {
 
 				<div className="about__data grid">
 					<div className="about__info">
-						<p className="about__description">Hey! I'm Kavinda. I don't just write code; I design & build solutions that bridge the gap between complex logic and great design. My time in the industry has taught me that the best software isn't just 'fast'—it’s scalable and reliable.</p>
+						<p className="about__description">Hey! I'm Trung. Front-End Engineer with 7+ years of experience building fast and scalable web
+applications. Specialized in React, Next.js, and TypeScript with a strong "Backend of the
+Frontend" mindset. Highly skilled at solving complex logic, handling massive datasets on
+the browser, and optimizing UI rendering speed.</p>
 
-						<p className="about__description">My goal is always the same: creating software that feels effortless for the user but is rock-solid on the backend, and I love every bit of the challenge. I'm a firm believer in continuous learning and always keeping a 'human-first' mindset in every line of code I write.</p>
+						<p className="about__description">Proven track record of delivering advanced features, including drag-and-drop editors
+and AI integrations. Passionate about writing clean code, improving team workflows, and
+mentoring junior engineers to build high-quality products.</p>
 
 						<div className="about__expertise">
 							<h4 className="about__expertise-title">Expertise Areas</h4>
 							<div className="about__expertise-list">
-								<span className="expertise-badge">Computer Programming</span>
-								<span className="expertise-badge">UI/UX Design</span>
-								<span className="expertise-badge">Problem Solving</span>
-								<span className="expertise-badge">API Design & Development</span>
-								<span className="expertise-badge">Cloud & DevOps</span>
-								<span className="expertise-badge">AI & Automation</span>
+								<span className="expertise-badge">React & Next.js</span>
+								<span className="expertise-badge">JavaScript / TypeScript</span>
+								<span className="expertise-badge">State Management</span>
+								<span className="expertise-badge">Web Performance</span>
+								<span className="expertise-badge">UI Rendering Optimization</span>
+								<span className="expertise-badge">AI Integrations (MCP)</span>
 							</div>
 						</div>
 					</div>

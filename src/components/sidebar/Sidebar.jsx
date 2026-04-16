@@ -10,7 +10,6 @@ const navLinks = [
 	{ id: 3, link: '#services', icon: 'icon-briefcase' },
 	{ id: 4, link: '#resume', icon: 'icon-graduation' },
 	{ id: 5, link: '#portfolio', icon: 'icon-layers' },
-	{ id: 6, link: '#blog', icon: 'icon-note' },
 	{ id: 7, link: '#contact', icon: 'icon-bubble' },
 ];
 

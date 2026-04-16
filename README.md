@@ -133,11 +133,11 @@ You can customize this portfolio by:
 
 ## 👨‍💻 Author
 
-**Kavinda Weerasinghe**
+**NGUYEN HUU TRUNG**
 
-- LinkedIn: [Kavinda Maduranga](https://www.linkedin.com/in/kavinda-maduranga-1302a71b7)
-- Twitter: [@kavindzMW](https://twitter.com/kavindzMW)
-- GitHub: [@foverokavindz](https://github.com/foverokavindz)
+- LinkedIn: [Trung](https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/)
+- Facebook: [huutrung.mmt](https://www.facebook.com/huutrung.mmt/)
+- GitHub: [@xintipi](https://github.com/xintipi)
 
 ## 🙏 Acknowledgements
 
@@ -149,5 +149,5 @@ You can customize this portfolio by:
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/foverokavindz">Kavinda Weerasinghe</a>
+  Made with ❤️ by <a href="https://github.com/xintipi">NGUYEN HUU TRUNG</a>
 </p>

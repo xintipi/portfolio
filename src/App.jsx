@@ -1,4 +1,4 @@
-import { Testimonials, Sidebar, Services, Resume, Pricing, Portfolio, Home, Contact, Blog, About, TechStack } from './components';
+import { Sidebar, Services, Resume, Pricing, Portfolio, Home, Contact, About, TechStack } from './components';
 import './App.css';
 import ThemeToggle from './components/themeToggle/ThemeToggle';
 import ClickSpark from './animations/ClickSpark';
@@ -24,8 +24,7 @@ function App() {
 						<Resume />
 						<Portfolio />
 						{/* <Pricing /> */}
-						<Blog />
-						<Testimonials />
+
 						<Contact />
 					</>
 				</ClickSpark>

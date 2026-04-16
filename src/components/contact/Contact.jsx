@@ -53,7 +53,7 @@ const Contact = () => {
 			const hiddenInput = form.current.querySelector('input[name="xcvbnm"]');
 			hiddenInput.value = JSON.stringify(clientInfo);
 
-			await emailjs.sendForm('service_iipp5p8', 'template_mw9cj3c', form.current, 'V_-J9LWhLL0RJXpEY');
+			await emailjs.sendForm('service_lgnrtjc', 'template_u3jp70i', form.current, '3jA-R4-F_7Clhrjov');
 
 			notify(NotificationType.SUCCESS);
 			form.current.reset();
@@ -78,20 +78,20 @@ const Contact = () => {
 				<form ref={form} onSubmit={sendEmail} className="contact__form">
 					<div className="contact__form-group">
 						<div className="contact__form-div">
-							<input type="text" name="user_name" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your name" disabled={isSending} required />
+							<input type="text" name="name" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your name" readOnly={isSending} required />
 						</div>
 
 						<div className="contact__form-div">
-							<input type="email" name="user_email" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your email" disabled={isSending} required />
+							<input type="email" name="email" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your email" readOnly={isSending} required />
 						</div>
 					</div>
 
 					<div className="contact__form-div">
-						<input type="text" name="user_subject" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your subject" disabled={isSending} required />
+						<input type="text" name="title" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your subject" readOnly={isSending} required />
 					</div>
 
 					<div className="contact__form-div contact__form-area">
-						<textarea name="user_message" rows="10" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Write your message" disabled={isSending} required />
+						<textarea name="message" rows="10" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Write your message" readOnly={isSending} required />
 					</div>
 
 					<input type="hidden" name="xcvbnm" />

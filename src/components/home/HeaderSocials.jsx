@@ -4,27 +4,17 @@ const socialLinks = [
   {
     id: 1,
     icon: 'fa-brands fa-linkedin',
-    link: 'https://www.linkedin.com/in/kavinda-maduranga-1302a71b7',
-  },
-  {
-    id: 2,
-    icon: 'fa-brands fa-x-twitter',
-    link: 'https://twitter.com/kavindzMW',
-  },
-  {
-    id: 3,
-    icon: 'fa-brands fa-behance',
-    link: 'https://www.behance.net/kavindamadhura',
+    link: 'https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/',
   },
   {
     id: 4,
     icon: 'fa-brands fa-facebook',
-    link: 'https://www.facebook.com/kavindzfovero/',
+    link: 'https://www.facebook.com/huutrung.mmt/',
   },
   {
     id: 5,
     icon: 'fa-brands fa-github',
-    link: 'https://github.com/foverokavindz',
+    link: 'https://github.com/xintipi',
   },
 ];
 

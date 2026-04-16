@@ -1,7 +1,7 @@
 import React from 'react';
 
 const aboutData = [
-	{ id: 4, icon: 'icon-badge', title: '01 +', subtitle: 'Years of Experience' },
+	{ id: 4, icon: 'icon-badge', title: '07 +', subtitle: 'Years of Experience' },
 	{ id: 1, icon: 'icon-fire', title: '15 +', subtitle: 'Projects completed' },
 	{ id: 2, icon: 'icon-cup', title: '10 +', subtitle: 'Technologies' },
 	{ id: 3, icon: 'icon-people', title: '01', subtitle: 'Research Project' },

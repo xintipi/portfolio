@@ -7,62 +7,37 @@ const expData = [
 		id: 1,
 		category: 'education',
 		icon: 'icon-graduation',
-		year: '2021 - present',
-		title: 'Bachelors of ICT in Software Technology',
+		year: '2013 - 2018',
+		title: 'Bachelor of Engineering (Computer Networks)',
 		desc: (
 			<span>
-				University of Sri Jayewardenepura <br /> GPA - 3.55/4.00 <br /> (Secound Upper Class Honors)
+				University of Information Technology (UIT) <br /> Ho Chi Minh City, Vietnam <br /> GPA: 7.91/10
 			</span>
 		),
 	},
 	{
 		id: 2,
-		category: 'education',
-		icon: 'icon-graduation',
-		year: '2023 - 2024',
-		title: 'Diploma in Software Engineering',
-		desc: (
-			<span>
-				Developers Stack Academy <br /> Tvec Approved
-			</span>
-		),
+		category: 'experience',
+		icon: 'icon-briefcase',
+		year: 'Aug 2023 - Present',
+		title: 'Front-End Developer @ Next Generation Platform Inc',
+		desc: 'React and TypeScript specialist. Built complex drag-and-drop features and integrated AI-powered toolings via MCP servers, heavily focusing on performance and robust state management.',
 	},
 	{
 		id: 3,
-		category: 'education',
-		icon: 'icon-graduation',
-		year: '2017 - 2019',
-		title: 'GCE (AL) in Technology Stream',
-		desc: (
-			<span>
-				Taxila Central College Horana <br /> 2As and B pass
-			</span>
-		),
+		category: 'experience',
+		icon: 'icon-briefcase',
+		year: 'Feb 2018 - 2023',
+		title: 'Front-End Developer @ Gumi Vietnam',
+		desc: 'Built React & Vue web apps and HTML5 Canvas games. Led TypeScript migrations and mentored junior frontend engineers establishing clean code practices.',
 	},
 	{
 		id: 4,
 		category: 'experience',
 		icon: 'icon-briefcase',
-		year: '2025 May - Present',
-		title: 'SE Intern @ Creative Software',
-		desc: 'Experienced in developing automated web scraping systems and containerized microservices. My work centers on extending system capabilities, designing intuitive management UIs, and building robust APIs that bridge complex data with seamless user experiences.',
-	},
-
-	{
-		id: 5,
-		category: 'experience',
-		icon: 'icon-briefcase',
-		year: '2024 Jun - 2024 Dec',
-		title: 'SE Intern @ Verdentra',
-		desc: 'Experienced in developing and optimizing web applications, system workflows, and database migrations using modern technologies, with a strong focus on user experience, efficiency, and collaboration.',
-	},
-	{
-		id: 6,
-		category: 'experience',
-		icon: 'icon-briefcase',
-		year: '2023 - 2024',
-		title: 'Web Designer @ Find X (lk)',
-		desc: 'Designed and built user-friendly websites, and landing pages using WordPress and Elementor.',
+		year: 'Feb 2017 - May 2017',
+		title: 'WordPress Developer Intern @ SOLAZU JSC',
+		desc: 'Built custom WordPress themes and plugins, optimizing performance and mobile UX under tight deadlines.',
 	},
 ];
 
