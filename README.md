@@ -1,5 +1,7 @@
 # 🚀 NGUYEN HUU TRUNG - Portfolio
 
+🌐 **Live Demo**: [https://portfolio-jrl7.vercel.app/](https://portfolio-jrl7.vercel.app/)
+
 A modern, responsive portfolio website built with React and Vite, featuring a sleek UI with dark/light mode support, interactive components, and a contact form.
 
 ## ✨ Features
@@ -114,6 +116,7 @@ You can customize this portfolio by:
 
 **NGUYEN HUU TRUNG**
 
+- Portfolio: [https://portfolio-jrl7.vercel.app/](https://portfolio-jrl7.vercel.app/)
 - LinkedIn: [Trung](https://www.linkedin.com/in/nguy%E1%BB%85n-h%E1%BB%AFu-trung-75859621a/)
 - Facebook: [huutrung.mmt](https://www.facebook.com/huutrung.mmt/)
 - GitHub: [@xintipi](https://github.com/xintipi)
