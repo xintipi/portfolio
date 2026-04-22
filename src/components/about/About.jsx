@@ -27,9 +27,7 @@ applications. Specialized in React, Next.js, and TypeScript with a strong "Backe
 Frontend" mindset. Highly skilled at solving complex logic, handling massive datasets on
 the browser, and optimizing UI rendering speed.</p>
 
-						<p className="about__description">Proven track record of delivering advanced features, including drag-and-drop editors
-and AI integrations. Passionate about writing clean code, improving team workflows, and
-mentoring junior engineers to build high-quality products.</p>
+						<p className="about__description">Proven track record of delivering advanced features, including intuitive content editors with smart re-ordering and AI integrations. Passionate about writing clean code, improving team workflows, and mentoring junior engineers to build high-quality products.</p>
 
 						<p className="about__description">Beyond coding, I'm passionate about brewing specialty coffee and designing custom mechanical keyboards. To me, whether it's dialing in the perfect espresso or crafting a seamless React UI, it all comes down to precision, balance, and a touch of art.</p>
 

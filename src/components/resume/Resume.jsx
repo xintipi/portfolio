@@ -21,7 +21,13 @@ const expData = [
 		icon: 'icon-briefcase',
 		year: 'Aug 2023 - Present',
 		title: 'Front-End Developer @ Next Generation Platform Inc',
-		desc: 'React and TypeScript specialist. Built complex drag-and-drop features and integrated AI-powered toolings via MCP servers, heavily focusing on performance and robust state management.',
+		desc: (
+			<ul style={{ paddingLeft: '20px', listStyleType: 'circle' }}>
+				<li><b>Smart Email Builder:</b> Boosted creation speed 10x via drag-and-drop UI and AI template generation via Node.js MCP server.</li>
+				<li><b>Smart Planner:</b> Optimized campaign management with high-performance Zustand/TanStack tables and automated Salesforce/Marketo syncing.</li>
+				<li><b>Smart Calendar:</b> Built centralized multi-platform calendar with advanced filtering, 1-click sharing, and batch-loading for smooth UI.</li>
+			</ul>
+		),
 	},
 	{
 		id: 3,
@@ -29,7 +35,13 @@ const expData = [
 		icon: 'icon-briefcase',
 		year: 'Feb 2018 - 2023',
 		title: 'Front-End Developer @ Gumi Vietnam',
-		desc: 'Built React & Vue web apps and HTML5 Canvas games. Led TypeScript migrations and mentored junior frontend engineers establishing clean code practices.',
+		desc: (
+			<ul style={{ paddingLeft: '20px', listStyleType: 'circle' }}>
+				<li><b>Projects:</b> Kadogawa AR learning, Pharmacy fast-booking system, Japanese legal platform, and Math Content HTML5 games.</li>
+				<li>Led company-wide TypeScript migration, greatly improving code quality and performance.</li>
+				<li>Mentored junior engineers by establishing clean code practices and conducting regular code reviews.</li>
+			</ul>
+		),
 	},
 	{
 		id: 4,

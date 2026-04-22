@@ -5,6 +5,9 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaFigma,
+  FaDatabase,
+  FaLayerGroup,
+  FaCogs,
 } from 'react-icons/fa';
 import {
   SiJavascript,
@@ -31,7 +34,10 @@ const TechStack = () => {
     { name: 'React', icon: <FaReact /> },
     { name: 'Next.js', icon: <SiNextdotjs /> },
     { name: 'Vue.js', icon: <SiVuedotjs /> },
+    { name: 'Zustand', icon: <FaLayerGroup /> },
+    { name: 'TanStack', icon: <FaCogs /> },
     { name: 'Node.js', icon: <FaNodeJs /> },
+    { name: 'REST API / MCP', icon: <FaDatabase /> },
     { name: 'Vitest', icon: <SiVitest /> },
     { name: 'Jest', icon: <SiJest /> },
     { name: 'Vite', icon: <SiVite /> },
