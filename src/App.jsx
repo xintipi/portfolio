@@ -1,34 +1,27 @@
-import { Sidebar, Services, Resume, Pricing, Portfolio, Home, Contact, About, TechStack } from './components';
-import './App.css';
-import ThemeToggle from './components/themeToggle/ThemeToggle';
-import ClickSpark from './animations/ClickSpark';
-import { useTheme } from './context/theme';
 import UserInfo from './components/UserInfo';
+import Nav from './components/layout/Nav';
+import MobileStickyCta from './components/layout/MobileStickyCta';
+import Hero from './components/sections/Hero';
+import Work from './components/sections/Work';
+import About from './components/sections/About';
+import Experience from './components/sections/Experience';
+import Contact from './components/sections/Contact';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
-	const { isDarkMode } = useTheme();
 	return (
 		<>
 			<UserInfo />
-			<ThemeToggle />
-			<Sidebar />
+			<Nav />
 			<main className="main">
-				<ClickSpark sparkColor={isDarkMode ? '#FF4757' : '#1A1A2E'} sparkSize={20} sparkRadius={70} sparkCount={10} duration={800} extraScale={1.2}>
-					<>
-						<Home />
-						<About />
-						<Services />
-						<TechStack />
-						<Resume />
-						<Portfolio />
-						{/* <Pricing /> */}
-
-						<Contact />
-					</>
-				</ClickSpark>
+				<Hero />
+				<Work />
+				<About />
+				<Experience />
+				<Contact />
 			</main>
+			<MobileStickyCta />
 			<Analytics />
 			<SpeedInsights />
 		</>

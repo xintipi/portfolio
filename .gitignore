@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# temp clones used for rule installation
+.tmp-ponytail
+.tmp-agent-skills
+.tmp-awesome-cursorrules

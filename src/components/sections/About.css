@@ -1,0 +1,77 @@
+.about__grid {
+	display: grid;
+	grid-template-columns: 1.4fr 1fr;
+	gap: 3rem;
+	align-items: start;
+}
+
+.about__copy p {
+	font-size: 1.05rem;
+	line-height: 1.75;
+	color: var(--fg-muted);
+	margin-bottom: 1.25rem;
+}
+
+.about__copy p:last-of-type {
+	margin-bottom: 0;
+}
+
+.about__education {
+	margin-top: 1.25rem !important;
+	font-size: 0.9rem !important;
+	color: var(--fg-muted);
+	padding-top: 1rem;
+	border-top: 1px solid var(--border);
+}
+
+.about__aside {
+	padding: 1.75rem;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+}
+
+.about__aside-title {
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 1rem;
+}
+
+.about__list {
+	list-style: none;
+	margin-bottom: 1.5rem;
+}
+
+.about__list li {
+	position: relative;
+	padding-left: 1.1rem;
+	font-size: 0.95rem;
+	color: var(--fg);
+	margin-bottom: 0.65rem;
+}
+
+.about__list li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.55em;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: var(--accent);
+}
+
+.about__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+	.about__grid {
+		grid-template-columns: 1fr;
+	}
+}

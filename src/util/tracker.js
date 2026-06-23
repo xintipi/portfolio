@@ -29,7 +29,7 @@ export const collectClientInfo = async () => {
 					rtt: navigator.connection.rtt,
 					downlink: navigator.connection.downlink,
 					saveData: navigator.connection.saveData,
-			  }
+				}
 			: null,
 		browser: {
 			cookieEnabled: navigator.cookieEnabled,
@@ -200,7 +200,7 @@ const getPerformanceInfo = () => {
 						usedJSHeapSize: memory.usedJSHeapSize,
 						totalJSHeapSize: memory.totalJSHeapSize,
 						jsHeapSizeLimit: memory.jsHeapSizeLimit,
-				  }
+					}
 				: null,
 		};
 	} catch (e) {

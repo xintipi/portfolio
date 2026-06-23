@@ -1,23 +1,6 @@
-
-import Sidebar from './sidebar/Sidebar';
-import Services from './services/Services';
-import Resume from './resume/Resume';
-import Pricing from './pricing/Pricing';
-import Portfolio from './portfolio/Portfolio';
-import Home from './home/Home';
-import Contact from './contact/Contact';
-import About from './about/About';
-import TechStack from './techStack/TechStack';
-
-export {
-
-  Sidebar,
-  Services,
-  Resume,
-  Pricing,
-  Portfolio,
-  Home,
-  Contact,
-  About,
-  TechStack,
-};
+export { default as Nav } from './layout/Nav';
+export { default as Hero } from './sections/Hero';
+export { default as Work } from './sections/Work';
+export { default as About } from './sections/About';
+export { default as Experience } from './sections/Experience';
+export { default as Contact } from './sections/Contact';
